@@ -48,34 +48,19 @@ export const projectList = [
     },
     url: "https://github.com/yebology/roomie-summary.git",
     job: [
-      "Deployed and developed end-to-end smart contract logic, including ERC-1155 token system using Foundry (Solidity).",
-      "Connected smart contract ABIs and REST APIs with the frontend on several key areas.",
-      "Integrated Reown (wallet provider) for seamless wallet interaction.",
+      "Ensured efficient token management using ERC-1155 with Foundry (Solidity).",
+      "Enhanced UX by seamlessly connected ABIs with the frontend via Ethers.js.",
+      "Enabled secure and frictionless wallet interaction by integrated Reown.",
     ],
     skills: [
       "Solidity",
       "Foundry",
+      "Layer-2",
       "TypeScript",
       "Ethers.js",
       "Pinata",
       "Reown",
-      "Layer-2",
     ],
-  },
-  {
-    name: "BlocEstate",
-    description: "Web3 Real Estate Auction Platform in Indonesia",
-    network: {
-      name: "ICP",
-      color: "bg-green-600",
-    },
-    url: "https://github.com/yebology/blocestate-summary.git",
-    job: [
-      "Connected end-to-end canister (smart contract) IDLs to the frontend via Agent.js.",
-      "Built the auction creation page using React (JavaScript) and TailwindCSS.",
-      "Integrated Plug Wallet for seamless transactions and Pinata IPFS for digital asset management.",
-    ],
-    skills: ["TypeScript", "React", "Agent.js", "Pinata", "Plug Wallet"],
   },
   {
     name: "EcoChain",
@@ -87,9 +72,9 @@ export const projectList = [
     },
     url: "https://github.com/yebology/ecochain-summary.git",
     job: [
-      "Deployed and developed end-to-end smart contract logic, including ERC-20 and ERC-721 token systems using Foundry (Solidity).",
-      "Built end-to-end fullstack application with React (TypeScript), TailwindCSS, and Ethers.js",
-      "Integrated WalletConnect (wallet provider) for seamless wallet interaction.",
+      "Ensured efficient token management using ERC-20-721 with Foundry (Solidity).",
+      "Enhanced UX by seamlessly connected ABIs with the frontend via Ethers.js.",
+      "Enabled secure and frictionless wallet interaction by integrated WalletConnect.",
     ],
     skills: [
       "Solidity",
@@ -99,5 +84,75 @@ export const projectList = [
       "Ethers.js",
       "WalletConnect",
     ],
+  },
+  {
+    name: "Survz",
+    description:
+      "Web3 Platform Bridging Survey Creators and Respondents",
+    network: {
+      name: "Solana",
+      color: "bg-purple-600",
+    },
+    url: "https://github.com/yebology/survz-summary.git",
+    job: [
+      "Enhanced platform efficiency by designing smart contract using Anchor (Rust).",
+      "Enhanced UX by seamlessly connected IDLs with the frontend via Solana web3.js.",
+    ],
+    skills: [
+      "Rust",
+      "Anchor",
+      "TypeScript",
+      "React",
+      "Solana web3.js",
+    ],
+  },
+  {
+    name: "Finuverse",
+    description:
+      "Web3 Digital Finance Marketplace Platform",
+    network: {
+      name: "Solana",
+      color: "bg-purple-600",
+    },
+    url: "https://github.com/yebology/finuverse-summary.git",
+    job: [
+      "Enhanced platform efficiency by designing smart contract using Anchor (Rust).",
+      "Enhanced UX by seamlessly connected IDLs with the frontend via Solana web3.js.",
+    ],
+    skills: [
+      "Rust",
+      "Anchor",
+      "TypeScript",
+      "React",
+      "Solana web3.js",
+    ],
+  },
+  {
+    name: "Book-Verse",
+    description: "Web3 Platform Bridging Book Authors and Readers",
+    network: {
+      name: "ICP",
+      color: "bg-green-600",
+    },
+    url: "https://github.com/yebology/bookverse-summary.git",
+    job: [
+      "Enhanced platform efficiency by designing smart contract using Motoko.",
+      "Secure transactions and streamlined asset management with Internet Identity and Pinata IPFS.",
+    ],
+    skills: ["Motoko", "TypeScript", "Internet Identity"],
+  },
+  {
+    name: "BlocEstate",
+    description: "Web3 Real Estate Auction Platform in Indonesia",
+    network: {
+      name: "ICP",
+      color: "bg-green-600",
+    },
+    url: "https://github.com/yebology/blocestate-summary.git",
+    job: [
+      "Enhanced UX by seamlessly connected IDLs with the frontend via Agent.js.",
+      "Secure transactions and streamlined asset management with Plug Wallet and Pinata IPFS.",
+    ],
+    skills: ["JavaScript", "React", "Agent.js", "Pinata", "Plug Wallet"],
   },
 ];
