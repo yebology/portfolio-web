@@ -107,27 +107,6 @@ export const projectList = [
     ],
   },
   {
-    name: "Finuverse",
-    description:
-      "Web3 Digital Finance Marketplace Platform",
-    network: {
-      name: "Solana",
-      color: "bg-purple-600",
-    },
-    url: "https://github.com/yebology/finuverse-summary.git",
-    job: [
-      "Enhanced platform efficiency by designing smart contract using Anchor (Rust).",
-      "Enhanced UX by seamlessly connected IDLs with the frontend via Solana web3.js.",
-    ],
-    skills: [
-      "Rust",
-      "Anchor",
-      "TypeScript",
-      "React",
-      "Solana web3.js",
-    ],
-  },
-  {
     name: "Book-Verse",
     description: "Web3 Platform Bridging Book Authors and Readers",
     network: {

@@ -37,9 +37,7 @@ contract Introduction {
             >
               Yobel Nathaniel Filipus
             </h1>
-            <h2
-              className={`text-3xl xl:text-4xl font-semibold text-blue-600`}
-            >
+            <h2 className={`text-3xl xl:text-4xl font-semibold text-blue-600`}>
               <Typewriter
                 words={["Blockchain Developer"]}
                 cursor
@@ -50,14 +48,13 @@ contract Introduction {
                 delaySpeed={1000}
               />
             </h2>
-            <p className="text-sm xl:text-md">
+            <p className="text-sm lg:text-md xl:text-lg">
               {" "}
-              I'm a lifelong learner passionate about Blockchain Development,
-              with experience building on Ethereum, Solana, and ICP. Blockchain
-              isn't just code to me—it’s a way to reshape finance, supply
-              chains, and digital identity. I thrive on building and
-              experimenting, always looking for new ways to push Web3 forward
-              with innovative solutions.
+              I'm a curious builder 🛠️ and blockchain enthusiast 🚀 who loves
+              experimenting across networks. To me, blockchain isn’t just
+              code—it’s a game-changer for finance, supply chains, and digital
+              identity. Always exploring new ways to push Web3 forward with
+              fresh ideas! ✨
             </p>
             <div className="flex flex-row space-x-2">
               {socialMedia.map((item, _) => (
