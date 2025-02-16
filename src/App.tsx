@@ -30,7 +30,7 @@ function App() {
       <div className="flex-1">
         <Routes>
           <Route path="/" element={<Home isDarkTheme={isDarkTheme} />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About isDarkTheme={isDarkTheme} />} />
           <Route
             path="/project"
             element={<Project isDarkTheme={isDarkTheme} />}

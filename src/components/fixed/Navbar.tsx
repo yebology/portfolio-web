@@ -40,7 +40,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           ))}
         </div>
       </div>
-      <div>
+      <div className={`rounded-full border p-2 ${isDarkTheme ? 'border-slate-100' : 'border-zinc-900'}`}>
         {isDarkTheme ? (
           <Moon
             className="cursor-pointer"
