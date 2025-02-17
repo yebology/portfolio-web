@@ -42,6 +42,7 @@ export const projectList = [
   {
     name: "Roomie",
     description: "Web3 AI-powered Accommodation Booking Platform",
+    type: "Team Project",
     network: {
       name: "Manta Pacific",
       color: "bg-blue-600",
@@ -58,7 +59,6 @@ export const projectList = [
       "Layer-2",
       "TypeScript",
       "Ethers.js",
-      "Pinata",
       "Reown",
     ],
   },
@@ -66,6 +66,7 @@ export const projectList = [
     name: "EcoChain",
     description:
       "Web3 Platform for Converting Waste into $RCYCL Tokens to Purchase NFTs",
+      type: "Personal Project",
     network: {
       name: "Ethereum",
       color: "bg-yellow-400",
@@ -73,7 +74,7 @@ export const projectList = [
     url: "https://github.com/yebology/ecochain-summary.git",
     job: [
       "Ensured efficient token management using ERC-20-721 with Foundry (Solidity).",
-      "Enhanced UX by seamlessly connected ABIs with the frontend via Ethers.js.",
+      "Enhanced UX by building a fullstack web platform and integrating Ethers.js.",
       "Enabled secure and frictionless wallet interaction by integrated WalletConnect.",
     ],
     skills: [
@@ -89,14 +90,15 @@ export const projectList = [
     name: "Survz",
     description:
       "Web3 Platform Bridging Survey Creators and Respondents",
+      type: "Personal Project",
     network: {
       name: "Solana",
       color: "bg-purple-600",
     },
     url: "https://github.com/yebology/survz-summary.git",
     job: [
-      "Enhanced platform efficiency by designing smart contract using Anchor (Rust).",
-      "Enhanced UX by seamlessly connected IDLs with the frontend via Solana web3.js.",
+      "Improved platform efficiency by designing smart contract using Anchor (Rust).",
+      "Enhanced UX by building a fullstack web platform and integrating Solana web3.js.",
     ],
     skills: [
       "Rust",
@@ -109,13 +111,14 @@ export const projectList = [
   {
     name: "Book-Verse",
     description: "Web3 Platform Bridging Book Authors and Readers",
+    type: "Team Project",
     network: {
       name: "ICP",
       color: "bg-green-600",
     },
     url: "https://github.com/yebology/bookverse-summary.git",
     job: [
-      "Enhanced platform efficiency by designing smart contract using Motoko.",
+      "Improved platform efficiency by designing smart contract using Motoko.",
       "Secure transactions and streamlined asset management with Internet Identity and Pinata IPFS.",
     ],
     skills: ["Motoko", "TypeScript", "Internet Identity"],
@@ -123,6 +126,7 @@ export const projectList = [
   {
     name: "BlocEstate",
     description: "Web3 Real Estate Auction Platform in Indonesia",
+    type: "Team Project",
     network: {
       name: "ICP",
       color: "bg-green-600",

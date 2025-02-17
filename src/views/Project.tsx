@@ -30,17 +30,24 @@ export const Project: React.FC<ProjectProps> = ({ isDarkTheme }) => {
           >
             {/* Header: Project Name & Network */}
             <div className="flex justify-between items-center mb-3">
-              <a
-                className="font-semibold hover:underline underline-offset-4 text-lg"
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {project.name}
-              </a>
+              <div className="flex flex-row space-x-3 items-center justify-center">
+                <a
+                  className="font-semibold hover:underline underline-offset-4 text-lg"
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {project.name}
+                </a>
+                <div className={`rounded-lg py-1 px-2 text-xs border ${project.type === "Personal Project" ? 'border-indigo-600' : 'border-pink-500'}`}>
+                  {project.type}
+                </div>
+              </div>
 
               <div className="flex flex-row items-center space-x-2">
-                <div className={`rounded-full size-2 ${project.network.color}`}></div>
+                <div
+                  className={`rounded-full size-2 ${project.network.color}`}
+                ></div>
                 <span className="text-sm">{project.network.name}</span>
               </div>
             </div>
