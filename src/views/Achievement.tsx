@@ -8,6 +8,7 @@ import photo_with_lecturer_2 from "../assets/photo_with_lecturer_2.png";
 import winner_photo_wsu from "../assets/winner_photo_wsu.jpeg";
 import photo_with_judges_3 from "../assets/photo_with_judges_3.jpeg";
 import terserah_team_photos from "../assets/terserah_team_photos.jpeg";
+import scholarship_certificate from "../assets/scholarship_certificate.jpeg";
 
 interface AchievementProps {
   isDarkTheme: boolean;
@@ -218,7 +219,46 @@ export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
           </div>
         </div>
       ),
-    }
+    },
+    {
+      title: "Fully Funded `Star` Scholarship Recipient (2022)",
+      content: (
+        <div>
+          <p className={p_style}>
+            I was awarded a full-tuition scholarship for a four-year
+            undergraduate program at Universitas Ciputra Surabaya and
+            consistently maintained a GPA above 3.5 throughout my academic
+            tenure.
+          </p>
+          <p className={`${ref_style}`}>
+            References :
+            <span>
+              <ul className={ul_style}>
+                <li>
+                  <a
+                    href="https://drive.google.com/file/d/19BwmV4WZB6zzz6uM-VKDr9tyMBfn-knU/view?usp=sharing"
+                    className={a_style}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Recipient Statement Letter
+                  </a>
+                </li>
+              </ul>
+            </span>
+          </p>
+          <div className={grid_style}>
+            <img
+              src={scholarship_certificate}
+              alt="startup template"
+              width={image_width}
+              height={image_height}
+              className={img_style}
+            />
+          </div>
+        </div>
+      ),
+    },
   ];
 
   return (
