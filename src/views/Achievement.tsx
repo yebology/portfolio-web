@@ -27,6 +27,7 @@ interface AchievementProps {
 export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
   const data = [
     {
+      isDarkTheme: isDarkTheme,
       title: "2nd Place in Codefest ICP Hub Indonesia Hackathon 7.0 (2024)",
       content: (
         <div>
@@ -109,6 +110,7 @@ export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
       ),
     },
     {
+      isDarkTheme: isDarkTheme,
       title:
         "1st Place in AI For Impact Innovation Challenge Competition (2023)",
       content: (
@@ -175,6 +177,7 @@ export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
       ),
     },
     {
+      isDarkTheme: isDarkTheme,
       title: "3rd Place in UC Venture Startup Games Competition (2022)",
       content: (
         <div>
@@ -220,6 +223,7 @@ export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
       ),
     },
     {
+      isDarkTheme: isDarkTheme,
       title: "Fully Funded `Star` Scholarship Recipient (2022)",
       content: (
         <div>

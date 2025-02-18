@@ -22,7 +22,7 @@ export const Project: React.FC<ProjectProps> = ({ isDarkTheme }) => {
         {projectList.map((project, index) => (
           <div
             key={index}
-            className={`border cursor-pointer hover:scale-105 duration-200 p-6 rounded-xl transition-all ${
+            className={`border cursor-pointer hover:scale-105 duration-200 p-4 md:p-6 rounded-xl transition-all ${
               isDarkTheme
                 ? "border-slate-100/40 hover:bg-slate-800/40 shadow-lg"
                 : "border-zinc-900 hover:bg-zinc-200/40 shadow-md"
@@ -30,16 +30,16 @@ export const Project: React.FC<ProjectProps> = ({ isDarkTheme }) => {
           >
             {/* Header: Project Name & Network */}
             <div className="flex justify-between items-center mb-3">
-              <div className="flex flex-row space-x-3 items-center justify-center">
+              <div className="flex flex-row space-x-1 md:space-x-3 items-center justify-center">
                 <a
-                  className="font-semibold hover:underline underline-offset-4 text-lg"
+                  className="font-semibold hover:underline underline-offset-4 text-md md:text-lg"
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {project.name}
                 </a>
-                <div className={`rounded-lg py-1 px-2 text-xs border ${project.type === "Personal Project" ? 'border-indigo-600' : 'border-pink-500'}`}>
+                <div className={`rounded-lg py-1 px-2 text-xs md:text-sm border ${project.type === "Personal Project" ? 'border-indigo-600' : 'border-pink-500'}`}>
                   {project.type}
                 </div>
               </div>
@@ -48,7 +48,7 @@ export const Project: React.FC<ProjectProps> = ({ isDarkTheme }) => {
                 <div
                   className={`rounded-full size-2 ${project.network.color}`}
                 ></div>
-                <span className="text-sm">{project.network.name}</span>
+                <span className="text-xs md:text-sm">{project.network.name}</span>
               </div>
             </div>
 
@@ -64,7 +64,7 @@ export const Project: React.FC<ProjectProps> = ({ isDarkTheme }) => {
                   <li
                     key={jobIndex}
                     className={`text-[14px] ${
-                      isDarkTheme ? "text-slate-400" : "text-zinc-600"
+                      isDarkTheme ? "text-slate-400" : "text-zinc-500"
                     }`}
                   >
                     {job}

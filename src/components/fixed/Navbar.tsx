@@ -4,15 +4,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 interface NavbarProps {
-  currentPageId: number;
-  setCurrentPageId: React.Dispatch<React.SetStateAction<number>>;
   isDarkTheme: boolean;
   setIsDarkTheme: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
-  currentPageId,
-  setCurrentPageId,
   isDarkTheme,
   setIsDarkTheme,
 }) => {
@@ -26,11 +22,12 @@ export const Navbar: React.FC<NavbarProps> = ({
           {navList.map((value, index) => (
             <h1
               onClick={() => {
-                setCurrentPageId(index);
+                sessionStorage.setItem("currentPageId", index.toString());
+                // setCurrentPageId(index);
                 navigate(value.url);
               }}
               className={`cursor-pointer ${
-                index === currentPageId
+                index === Number(sessionStorage.getItem("currentPageId") || 0)
                   ? "text-gray-800 bg-zinc-300 rounded-full px-4 py-1"
                   : "hover:bg-zinc-400 hover:bg-opacity-50 rounded-full px-4 py-1"
               }`}
@@ -40,7 +37,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           ))}
         </div>
       </div>
-      <div className={`rounded-xl border p-2 ${isDarkTheme ? 'border-slate-100' : 'border-zinc-900'}`}>
+      <div
+        className={`rounded-xl border p-2 ${
+          isDarkTheme ? "border-slate-100" : "border-zinc-900"
+        }`}
+      >
         {isDarkTheme ? (
           <Moon
             className="cursor-pointer"

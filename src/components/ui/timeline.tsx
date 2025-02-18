@@ -1,6 +1,5 @@
 "use client";
 import {
-  useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
@@ -10,6 +9,7 @@ import React, { useEffect, useRef, useState } from "react";
 interface TimelineEntry {
   title: string;
   content: React.ReactNode;
+  isDarkTheme: boolean
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
@@ -53,7 +53,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className="flex justify-start md:gap-10 mb-10 xl:mb-20"
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="h-10 absolute left-3 xl:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
+              <div className={`h-10 absolute left-3 xl:left-3 w-10 rounded-full ${item.isDarkTheme ? 'bg-slate-100' : 'bg-zinc-900'} flex items-center justify-center`}>
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
               <h3 className="hidden md:block text-xl md:pl-20 lg:text-3xl font-bold ">

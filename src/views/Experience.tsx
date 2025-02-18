@@ -19,6 +19,7 @@ interface ExperienceProps {
 export const Experience: React.FC<ExperienceProps> = ({ isDarkTheme }) => {
   const data = [
     {
+      isDarkTheme: isDarkTheme,
       title: "Apple Developer Academy (Mar 2025 - Now)",
       content: (
         <div>
@@ -59,6 +60,7 @@ export const Experience: React.FC<ExperienceProps> = ({ isDarkTheme }) => {
       ),
     },
     {
+      isDarkTheme: isDarkTheme,
       title: "Informatics Student Union (Aug 2023 - Jun 2024)",
       content: (
         <div>
