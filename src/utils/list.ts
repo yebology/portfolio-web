@@ -6,6 +6,10 @@ export const navList = [
     url: "/",
   },
   {
+    title: "Experience",
+    url: "/experience",
+  },
+  {
     title: "Achievement",
     url: "/achievement",
   },
@@ -66,7 +70,7 @@ export const projectList = [
     name: "EcoChain",
     description:
       "Web3 Platform for Converting Waste into $RCYCL Tokens to Purchase NFTs",
-      type: "Personal Project",
+    type: "Personal Project",
     network: {
       name: "Ethereum",
       color: "bg-yellow-400",
@@ -88,9 +92,8 @@ export const projectList = [
   },
   {
     name: "Survz",
-    description:
-      "Web3 Platform Bridging Survey Creators and Respondents",
-      type: "Personal Project",
+    description: "Web3 Platform Bridging Survey Creators and Respondents",
+    type: "Personal Project",
     network: {
       name: "Solana",
       color: "bg-purple-600",
@@ -100,13 +103,7 @@ export const projectList = [
       "Improved platform efficiency by designing smart contract using Anchor (Rust).",
       "Enhanced UX by building a fullstack web platform and integrating Solana web3.js.",
     ],
-    skills: [
-      "Rust",
-      "Anchor",
-      "TypeScript",
-      "React",
-      "Solana web3.js",
-    ],
+    skills: ["Rust", "Anchor", "TypeScript", "React", "Solana web3.js"],
   },
   {
     name: "Book-Verse",

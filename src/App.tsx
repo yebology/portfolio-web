@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Achievement } from "./views/Achievement";
 import { Project } from "./views/Project";
 import { Footer } from "./components/fixed/Footer";
+import { Experience } from "./views/Experience";
 
 function App() {
   const [currentPageId, setCurrentPageId] = useState<number>(0);
@@ -30,7 +31,14 @@ function App() {
       <div className="flex-1">
         <Routes>
           <Route path="/" element={<Home isDarkTheme={isDarkTheme} />} />
-          <Route path="/achievement" element={<Achievement isDarkTheme={isDarkTheme} />} />
+          <Route
+            path="/experience"
+            element={<Experience isDarkTheme={isDarkTheme} />}
+          />
+          <Route
+            path="/achievement"
+            element={<Achievement isDarkTheme={isDarkTheme} />}
+          />
           <Route
             path="/project"
             element={<Project isDarkTheme={isDarkTheme} />}

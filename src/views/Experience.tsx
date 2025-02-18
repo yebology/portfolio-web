@@ -1,25 +1,16 @@
 import { Timeline } from "@/components/ui/timeline";
-import React from "react";
-
-import certifate from "../assets/certificate.jpeg";
-import codefest_ig from "../assets/codefest_ig.png";
-import photo_with_lecturer from "../assets/photo_with_lecturer.png";
-import photo_with_lecturer_2 from "../assets/photo_with_lecturer_2.png";
-import winner_photo_wsu from "../assets/winner_photo_wsu.jpeg";
-import photo_with_judges_3 from "../assets/photo_with_judges_3.jpeg";
-import terserah_team_photos from "../assets/terserah_team_photos.jpeg";
-import scholarship_certificate from "../assets/scholarship_certificate.jpeg";
 import { a_style, grid_style, image_height, image_width, img_style, p_style, ref_style, ul_style } from "@/utils/style_helper";
+import React from "react";
+import certifate from "../assets/certificate.jpeg";
 
-interface AchievementProps {
+interface ExperienceProps {
   isDarkTheme: boolean;
 }
 
-export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
-
+export const Experience: React.FC<ExperienceProps> = ({ isDarkTheme }) => {
   const data = [
     {
-      title: "2nd Place in Codefest ICP Hub Indonesia Hackathon 7.0 (2024)",
+      title: "Apple Developer Academy (2025)",
       content: (
         <div>
           <p className={`${p_style}`}>
@@ -83,14 +74,14 @@ export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
               className={img_style}
             />
             <img
-              src={photo_with_lecturer}
+              src={certifate}
               alt="startup template"
               width={image_width}
               height={image_height}
               className={img_style}
             />
             <img
-              src={codefest_ig}
+              src={certifate}
               alt="startup template"
               width={image_width}
               height={image_height}
@@ -102,7 +93,7 @@ export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
     },
     {
       title:
-        "1st Place in AI For Impact Innovation Challenge Competition (2023)",
+        "Informatics Student Union (Aug 2023 - Jun 2024)",
       content: (
         <div>
           <p className={p_style}>
@@ -149,14 +140,14 @@ export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
           </p>
           <div className={grid_style}>
             <img
-              src={winner_photo_wsu}
+              src={certifate}
               alt="startup template"
               width={image_width}
               height={image_height}
               className={img_style}
             />
             <img
-              src={photo_with_lecturer_2}
+              src={certifate}
               alt="startup template"
               width={image_width}
               height={image_height}
@@ -165,93 +156,8 @@ export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
           </div>
         </div>
       ),
-    },
-    {
-      title: "3rd Place in UC Venture Startup Games Competition (2022)",
-      content: (
-        <div>
-          <p className={p_style}>
-            As an App Designer, I played a pivotal role in crafting an
-            exceptional user experience through creative and innovative app
-            design on A3 paper.
-          </p>
-          <p className={`${ref_style}`}>
-            References :
-            <span>
-              <ul className={ul_style}>
-                <li>
-                  <a
-                    href="https://drive.google.com/file/d/1Vd7nJvJRUzimlYEQB0bLNKkizn-xyyzA/view?usp=sharing"
-                    className={a_style}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Winner Certificate
-                  </a>
-                </li>
-              </ul>
-            </span>
-          </p>
-          <div className={grid_style}>
-            <img
-              src={terserah_team_photos}
-              alt="startup template"
-              width={image_width}
-              height={image_height}
-              className={img_style}
-            />
-            <img
-              src={photo_with_judges_3}
-              alt="startup template"
-              width={image_width}
-              height={image_height}
-              className={img_style}
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Fully Funded `Star` Scholarship Recipient (2022)",
-      content: (
-        <div>
-          <p className={p_style}>
-            I was awarded a full-tuition scholarship for a four-year
-            undergraduate program at Universitas Ciputra Surabaya and
-            consistently maintained a GPA above 3.5 throughout my academic
-            tenure.
-          </p>
-          <p className={`${ref_style}`}>
-            References :
-            <span>
-              <ul className={ul_style}>
-                <li>
-                  <a
-                    href="https://drive.google.com/file/d/19BwmV4WZB6zzz6uM-VKDr9tyMBfn-knU/view?usp=sharing"
-                    className={a_style}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Recipient Statement Letter
-                  </a>
-                </li>
-              </ul>
-            </span>
-          </p>
-          <div className={grid_style}>
-            <img
-              src={scholarship_certificate}
-              alt="startup template"
-              width={image_width}
-              height={image_height}
-              className={img_style}
-            />
-          </div>
-        </div>
-      ),
-    },
+    }
   ];
-
   return (
     <div className="mx-8 md:mx-24">
       <h1
@@ -261,7 +167,7 @@ export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
             : "from-black to-gray-300/80"
         } bg-clip-text text-transparent leading-normal pb-4 mb-10`}
       >
-        Achievement
+        Experience
       </h1>{" "}
       <div>
         <Timeline data={data} />
