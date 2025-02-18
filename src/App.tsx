@@ -3,7 +3,7 @@ import { Home } from "./views/Home";
 import { Particles } from "./components/magicui/particles";
 import { Navbar } from "./components/fixed/Navbar";
 import { useEffect, useState } from "react";
-import { About } from "./views/About";
+import { Achievement } from "./views/Achievement";
 import { Project } from "./views/Project";
 import { Footer } from "./components/fixed/Footer";
 
@@ -30,7 +30,7 @@ function App() {
       <div className="flex-1">
         <Routes>
           <Route path="/" element={<Home isDarkTheme={isDarkTheme} />} />
-          <Route path="/about" element={<About isDarkTheme={isDarkTheme} />} />
+          <Route path="/achievement" element={<Achievement isDarkTheme={isDarkTheme} />} />
           <Route
             path="/project"
             element={<Project isDarkTheme={isDarkTheme} />}

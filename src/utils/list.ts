@@ -6,8 +6,8 @@ export const navList = [
     url: "/",
   },
   {
-    title: "About",
-    url: "/about",
+    title: "Achievement",
+    url: "/achievement",
   },
   {
     title: "Project",
