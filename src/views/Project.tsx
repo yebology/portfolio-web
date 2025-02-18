@@ -9,7 +9,7 @@ export const Project: React.FC<ProjectProps> = ({ isDarkTheme }) => {
   return (
     <div className="mx-8 md:mx-24">
       <h1
-        className={`text-3xl xl:text-6xl font-bold text-center bg-gradient-to-b ${
+        className={`text-5xl xl:text-6xl font-bold text-center bg-gradient-to-b ${
           isDarkTheme
             ? "from-white to-gray-400/80"
             : "from-black to-gray-300/80"

@@ -9,14 +9,22 @@ import winner_photo_wsu from "../assets/winner_photo_wsu.jpeg";
 import photo_with_judges_3 from "../assets/photo_with_judges_3.jpeg";
 import terserah_team_photos from "../assets/terserah_team_photos.jpeg";
 import scholarship_certificate from "../assets/scholarship_certificate.jpeg";
-import { a_style, grid_style, image_height, image_width, img_style, p_style, ref_style, ul_style } from "@/utils/style_helper";
+import {
+  a_style,
+  grid_style,
+  image_height,
+  image_width,
+  img_style,
+  p_style,
+  ref_style,
+  ul_style,
+} from "@/utils/style_helper";
 
 interface AchievementProps {
   isDarkTheme: boolean;
 }
 
 export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
-
   const data = [
     {
       title: "2nd Place in Codefest ICP Hub Indonesia Hackathon 7.0 (2024)",
@@ -255,7 +263,7 @@ export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
   return (
     <div className="mx-8 md:mx-24">
       <h1
-        className={`text-3xl xl:text-6xl font-bold text-center bg-gradient-to-b ${
+        className={`text-5xl xl:text-6xl font-bold text-center bg-gradient-to-b ${
           isDarkTheme
             ? "from-white to-gray-400/80"
             : "from-black to-gray-300/80"
