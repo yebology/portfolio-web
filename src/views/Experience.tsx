@@ -141,7 +141,7 @@ export const Experience: React.FC<ExperienceProps> = ({ isDarkTheme }) => {
           >
             {/* Header: Role & Company */}
             <div className="flex flex-col justify-between items-start mb-3">
-              <div className="flex flex-row justify-between items-center w-full">
+              <div className="flex flex-col md:flex-row items-start justify-between md:items-center w-full">
                 <div className="flex flex-row items-center space-x-1 md:space-x-2">
                   <span className="font-semibold text-md md:text-lg">
                     {exp.role}

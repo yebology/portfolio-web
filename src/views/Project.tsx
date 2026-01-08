@@ -44,7 +44,7 @@ export const Project: React.FC<ProjectProps> = ({ isDarkTheme }) => {
                 </div>
               </div>
 
-              <div className="flex flex-row items-center space-x-2">
+              <div className="flex flex-row items-center space-x-1 md:space-x-2">
                 <div
                   className={`rounded-full size-2 ${project.network.color}`}
                 ></div>

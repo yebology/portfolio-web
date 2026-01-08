@@ -22,13 +22,13 @@ export const FloatingNavbar : React.FC<FloatingNavbarProps> = ({ isDarkTheme }) 
       ),
       href: "/experience",
     },
-    {
-      title: "Achievement",
-      icon: (
-        <IconTrophy className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "/achievement",
-    },
+    // {
+    //   title: "Achievement",
+    //   icon: (
+    //     <IconTrophy className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    //   ),
+    //   href: "/achievement",
+    // },
     {
       title: "Project",
       icon: (

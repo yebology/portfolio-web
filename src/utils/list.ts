@@ -111,7 +111,7 @@ export const projectList = [
       "Web3 Crowdfunding Platform Connecting Indonesian Game Developers with Global Investors through Milestone-Based Funding and Anti-Fraud Investor Voting.",
     type: "Team Project",
     network: {
-      name: "Ethereum Sepolia",
+      name: "Ethereum",
       color: "bg-yellow-600",
     },
     url: "https://github.com/NusaHub",
@@ -159,7 +159,7 @@ export const projectList = [
       "Web3 Impact-To-Earn Platform That Powered By AI And DAO That Rewards Indonesia River Cleanups With NUSA Tokens, Redeemable For NFT Concert Tickets.",
     type: "Personal Project",
     network: {
-      name: "Lisk Sepolia",
+      name: "Lisk",
       color: "bg-gray-600",
     },
     url: "https://github.com/NusaQuest",
@@ -220,7 +220,7 @@ export const projectList = [
       "Web3 Platform for Converting Waste into $RCYCL Tokens to Purchase NFTs",
     type: "Personal Project",
     network: {
-      name: "Ethereum Sepolia",
+      name: "Ethereum",
       color: "bg-yellow-400",
     },
     url: "https://github.com/yebology/ecochain-dapp.git",
@@ -272,7 +272,7 @@ export const projectList = [
     description: "A Web3 Crowdfunding Platform",
     type: "Personal Project",
     network: {
-      name: "Ethereum Sepolia",
+      name: "Ethereum",
       color: "bg-yellow-400",
     },
     url: "https://github.com/yebology/crowdfy-dapp.git",
@@ -288,7 +288,7 @@ export const projectList = [
     description: "A Web3 Voting Platform",
     type: "Personal Project",
     network: {
-      name: "Ethereum Sepolia",
+      name: "Ethereum",
       color: "bg-yellow-400",
     },
     url: "https://github.com/yebology/eazyvote-dapp.git",
