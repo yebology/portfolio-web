@@ -1,5 +1,5 @@
 import { FloatingDock } from "@/components/ui/floating-dock";
-import { IconBriefcase, IconCode, IconHome, IconTrophy } from "@tabler/icons-react";
+import { IconBriefcase, IconCode, IconHome } from "@tabler/icons-react";
 import React from "react";
 
 interface FloatingNavbarProps {
