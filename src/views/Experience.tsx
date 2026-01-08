@@ -142,7 +142,7 @@ export const Experience: React.FC<ExperienceProps> = ({ isDarkTheme }) => {
             {/* Header: Role & Company */}
             <div className="flex flex-col justify-between items-start mb-3">
               <div className="flex flex-col md:flex-row items-start justify-between md:items-center w-full">
-                <div className="flex flex-row items-center space-x-1 md:space-x-2">
+                <div className="flex flex-row items-center space-x-2">
                   <span className="font-semibold text-md md:text-lg">
                     {exp.role}
                   </span>
@@ -178,6 +178,24 @@ export const Experience: React.FC<ExperienceProps> = ({ isDarkTheme }) => {
                   </li>
                 ))}
               </ul>
+            )}
+
+            {/* Skills */}
+            {exp.skills.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-3">
+                {exp.skills.map((skill, index) => (
+                  <div
+                    key={index}
+                    className={`rounded-md border px-3 py-1 text-xs ${
+                      isDarkTheme
+                        ? "border-slate-100/40 bg-slate-900/40 hover:bg-slate-700"
+                        : "border-zinc-900 bg-zinc-100 hover:bg-zinc-300"
+                    }`}
+                  >
+                    {skill}
+                  </div>
+                ))}
+              </div>
             )}
           </div>
         ))}

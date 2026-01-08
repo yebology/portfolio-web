@@ -54,6 +54,7 @@ export const experienceList = [
       "Undertaking a 6-week intensive program to earn the AWS Developer Associate (DVA-C02) certification.",
       "Gained hands-on experience with key AWS services including Lambda, API Gateway, S3, DynamoDB, and IAM.",
     ],
+    skills: ["AWS Developer Associate (DVA-C02)", "Lambda", "S3", "IAM"],
   },
   {
     role: "Full-Stack Dev",
@@ -65,6 +66,13 @@ export const experienceList = [
     jobdesc: [
       "Delivered an end-to-end website for real-time IoT device management using Next.js, TypeScript, Golang (Fiber), GORM, and PostgreSQL, enabling efficient monitoring and control of connected devices.",
       "Managed end-to-end development using Docker, enabling consistent environments and easier maintenance.",
+    ],
+    skills: [
+      "Golang (Fiber)",
+      "GORM",
+      "PostgreSQL",
+      "Docker",
+      "Next.js (TypeScript)",
     ],
   },
   {
@@ -78,6 +86,13 @@ export const experienceList = [
       "Delivered an end-to-end PWA for one of the largest golf courses in East Java, Indonesia, focusing on weekly and daily reporting management for foremen and supervisors, using Next.js, TypeScript, Golang (Fiber), GORM, and PostgreSQL.",
       "Managed end-to-end development and deployment using Docker on a VPS, enabling consistent environments and easier maintenance.",
     ],
+    skills: [
+      "Golang (Fiber)",
+      "GORM",
+      "PostgreSQL",
+      "Docker",
+      "Next.js (TypeScript)",
+    ],
   },
   {
     role: "Backend Dev",
@@ -88,7 +103,9 @@ export const experienceList = [
     period: "Dec 2025 - Feb 2026",
     jobdesc: [
       "Developed the core backend systems for a supermarket in Tulungagung, handling authentication, custom middleware features, store management, and transactions using Golang (Fiber), GORM, and PostgreSQL.",
+      "Managed end-to-end development and deployment using Docker on a VPS, enabling consistent environments and easier maintenance.",
     ],
+    skills: ["Golang (Fiber)", "GORM", "PostgreSQL", "Docker"],
   },
   {
     role: "PM & Backend Dev",
@@ -100,6 +117,14 @@ export const experienceList = [
     jobdesc: [
       "Led project planning and coordination as Project Manager for the final challenge, focusing on helping musculoskeletal therapy patients complete physiotherapist-prescribed home exercises.",
       "Designed and developed the end-to-end backend system for the final challenge project using Golang (Fiber), GORM, and PostgreSQL, ensuring high performance and maintainable architecture.",
+    ],
+    skills: [
+      "Project Management",
+      "Team Building",
+      "Leadership",
+      "Golang (Fiber)",
+      "GORM",
+      "PostgreSQL",
     ],
   },
 ];
