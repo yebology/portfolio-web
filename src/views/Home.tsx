@@ -52,10 +52,13 @@ contract Introduction {
               {" "}
               I'm a curious builder 🛠️ and blockchain enthusiast 🚀 with
               hands-on experience building on{" "}
-              <span className="font-bold">EVM, SVM, and ICP networks</span>. To
-              me, blockchain isn’t just code—it’s a tool to innovate finance,
-              supply chains, and digital identity. Always exploring new ways to
-              push Web3 forward with fresh ideas! ✨
+              <span className="font-bold">EVM, SVM, and ICP networks</span>.
+              Experienced in developing{" "}
+              <span className="font-bold">
+                DAO-based systems, UUPS, and ERC-20-721-1155 smart contracts
+              </span>
+              . I'm Always exploring new ways to push Web3 forward with fresh
+              ideas! ✨
             </p>
             <div className="flex flex-row space-x-2">
               {socialMedia.map((item, _) => (

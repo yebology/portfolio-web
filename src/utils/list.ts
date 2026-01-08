@@ -141,7 +141,7 @@ export const projectList = [
     },
     url: "https://github.com/NusaHub",
     job: [
-      "Built DAO-governed, milestone-based, anti-fraud crowdfunding smart contracts using Foundry (Solidity).",
+      "Built DAO-governed, UUPS, milestone-based, anti-fraud crowdfunding smart contracts using Foundry (Solidity).",
       "Enabled secure wallet access and frontend interaction with on-chain smart contracts using Xellar & Wagmi.",
     ],
     skills: ["Foundry (Solidity)", "Layer-2", "TypeScript", "Wagmi", "Xellar"],
