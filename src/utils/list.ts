@@ -91,7 +91,7 @@ export const experienceList = [
     ],
   },
   {
-    role: "Project Manager & Backend Dev",
+    role: "PM & Backend Dev",
     type: "Internship",
     color: "border-green-600",
     company: "Apple Developer Academy @UC Cohort 2025",
