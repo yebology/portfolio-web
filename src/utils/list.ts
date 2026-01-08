@@ -1,4 +1,5 @@
 import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { m } from "motion/react";
 
 export const navList = [
   {
@@ -39,6 +40,68 @@ export const socialMedia = [
     icon: Instagram,
     title: "Instagram",
     url: "https://instagram.com/yobelnathaniel01",
+  },
+];
+
+export const experienceList = [
+  {
+    role: "AWS Trainee Dev",
+    type: "Contract",
+    color: "border-indigo-600",
+    company: "axrail.ai",
+    country: "Malaysia",
+    period: "Jan 2026 - Mar 2026",
+    jobdesc: [
+      "Undertaking a 6-week intensive program to earn the AWS Developer Associate (DVA-C02) certification.",
+      "Gained hands-on experience with key AWS services including Lambda, API Gateway, S3, DynamoDB, and IAM.",
+    ],
+  },
+  {
+    role: "Full-Stack Dev",
+    type: "Contract",
+    color: "border-indigo-600",
+    company: "Liberty Technology Solutions",
+    country: "USA",
+    period: "Dec 2025 - Present",
+    jobdesc: [
+      "Delivered an end-to-end website for real-time IoT device management using Next.js, TypeScript, Golang (Fiber), GORM, and PostgreSQL, enabling efficient monitoring and control of connected devices.",
+      "Managed end-to-end development using Docker, enabling consistent environments and easier maintenance.",
+    ],
+  },
+  {
+    role: "Full-Stack Dev",
+    type: "Freelance",
+    color: "border-pink-600",
+    company: "Ciputra Golf Surabaya",
+    country: "Indonesia",
+    period: "Dec 2025 - Mar 2026",
+    jobdesc: [
+      "Delivered an end-to-end PWA for one of the largest golf courses in East Java, Indonesia, focusing on weekly and daily reporting management for foremen and supervisors, using Next.js, TypeScript, Golang (Fiber), GORM, and PostgreSQL.",
+      "Managed end-to-end development and deployment using Docker on a VPS, enabling consistent environments and easier maintenance.",
+    ],
+  },
+  {
+    role: "Backend Dev",
+    type: "Freelance",
+    color: "border-pink-600",
+    company: "Tokpin",
+    country: "Indonesia",
+    period: "Dec 2025 - Feb 2026",
+    jobdesc: [
+      "Developed the core backend systems for a supermarket in Tulungagung, handling authentication, custom middleware features, store management, and transactions using Golang (Fiber), GORM, and PostgreSQL.",
+    ],
+  },
+  {
+    role: "Project Manager & Backend Dev",
+    type: "Internship",
+    color: "border-green-600",
+    company: "Apple Developer Academy @UC Cohort 2025",
+    country: "Indonesia",
+    period: "Mar 2025 - Dec 2025",
+    jobdesc: [
+      "Led project planning and coordination as Project Manager for the final challenge, focusing on helping musculoskeletal therapy patients complete physiotherapist-prescribed home exercises.",
+      "Designed and developed the end-to-end backend system for the final challenge project using Golang (Fiber), GORM, and PostgreSQL, ensuring high performance and maintainable architecture.",
+    ],
   },
 ];
 
