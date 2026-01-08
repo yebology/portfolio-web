@@ -1,5 +1,4 @@
 import { Github, Instagram, Linkedin, Mail } from "lucide-react";
-import { m } from "motion/react";
 
 export const navList = [
   {

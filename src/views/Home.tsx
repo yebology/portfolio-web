@@ -13,7 +13,7 @@ pragma solidity ^0.8.28;
 
 contract Introduction {
     string public name = "Yobel Nathaniel Filipus";
-    string public title = "Blockchain Developer";
+    string public title = "Smart Contract Dev";
     string public funFact =
       "I talk to smart contracts more than humans! 🤖";
 

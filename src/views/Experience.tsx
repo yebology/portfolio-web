@@ -1,17 +1,17 @@
-import { Timeline } from "@/components/ui/timeline";
-import {
-  grid_style,
-  image_height,
-  image_width,
-  img_style,
-  p_style,
-  ul_style,
-} from "@/utils/style_helper";
+// import { Timeline } from "@/components/ui/timeline";
+// import {
+//   grid_style,
+//   image_height,
+//   image_width,
+//   img_style,
+//   p_style,
+//   ul_style,
+// } from "@/utils/style_helper";
 import React from "react";
-import certifate from "../assets/certificate.jpeg";
-import closing_su from "../assets/closing_su.jpg";
-import rcn from "../assets/rcn.jpg";
-import { experienceList, projectList } from "@/utils/list";
+// import certifate from "../assets/certificate.jpeg";
+// import closing_su from "../assets/closing_su.jpg";
+// import rcn from "../assets/rcn.jpg";
+import { experienceList } from "@/utils/list";
 
 interface ExperienceProps {
   isDarkTheme: boolean;
