@@ -9,10 +9,10 @@ export const navList = [
     title: "Experience",
     url: "/experience",
   },
-  {
-    title: "Achievement",
-    url: "/achievement",
-  },
+  // {
+  //   title: "Achievement",
+  //   url: "/achievement",
+  // },
   {
     title: "Project",
     url: "/project",
@@ -44,6 +44,93 @@ export const socialMedia = [
 
 export const projectList = [
   {
+    name: "NusaHub",
+    description:
+      "Web3 Crowdfunding Platform Connecting Indonesian Game Developers with Global Investors through Milestone-Based Funding and Anti-Fraud Investor Voting.",
+    type: "Team Project",
+    network: {
+      name: "Ethereum Sepolia",
+      color: "bg-yellow-600",
+    },
+    url: "https://github.com/NusaHub",
+    job: [
+      "Built DAO-governed, milestone-based, anti-fraud crowdfunding smart contracts using Foundry (Solidity).",
+      "Enabled secure wallet access and frontend interaction with on-chain smart contracts using Xellar & Wagmi.",
+    ],
+    skills: ["Foundry (Solidity)", "Layer-2", "TypeScript", "Wagmi", "Xellar"],
+  },
+  {
+    name: "BlocEstate",
+    description: "Web3 Real Estate Auction Platform in Indonesia",
+    type: "Team Project",
+    network: {
+      name: "ICP",
+      color: "bg-green-600",
+    },
+    url: "https://github.com/yebology/blocestate-summary.git",
+    job: [
+      "Won 2nd Place in Codefest ICP Hub Indonesia 7.0",
+      "Enabled secure wallet authentication and frontend interaction with on-chain smart contracts on ICP for a decentralized real estate auction platform in Indonesia using Plug Wallet & Agent.js.",
+    ],
+    skills: ["JavaScript", "React", "Agent.js", "Pinata", "Plug Wallet"],
+  },
+  {
+    name: "BlocTenderID",
+    description:
+      "A DAO & AI-Powered Platform for Nepotism-Free Government Procurement",
+    type: "Team Project",
+    network: {
+      name: "Optimism",
+      color: "bg-red-600",
+    },
+    url: "https://github.com/garuda-hacks-6-ucs",
+    job: [
+      "Selected as a Top 7 Finalist at GarudaHacks 6.0 Hackathon.",
+      "Built DAO-governed ERC-721 smart contracts for an anti-nepotism platform using Foundry (Solidity).",
+      "Enabled secure wallet access and frontend interaction with on-chain smart contracts using Xellar & Wagmi.",
+    ],
+    skills: ["Foundry (Solidity)", "Layer-2", "TypeScript", "Wagmi", "Xellar"],
+  },
+  {
+    name: "NusaQuest",
+    description:
+      "Web3 Impact-To-Earn Platform That Powered By AI And DAO That Rewards Indonesia River Cleanups With NUSA Tokens, Redeemable For NFT Concert Tickets.",
+    type: "Personal Project",
+    network: {
+      name: "Lisk Sepolia",
+      color: "bg-gray-600",
+    },
+    url: "https://github.com/NusaQuest",
+    job: [
+      "Handled end-to-end Web3 development: blockchain, REST API (Golang + OpenAI integration), and React frontend.",
+      "Developed DAO-governed ERC-1155 smart contracts using Foundry (Solidity).",
+      "Enabled secure wallet access and frontend interaction with on-chain contracts via Xellar & Wagmi.",
+    ],
+    skills: [
+      "Foundry (Solidity)",
+      "Layer-2",
+      "Golang",
+      "OpenAI API",
+      "Xellar",
+      "Wagmi",
+    ],
+  },
+  {
+    name: "Survz",
+    description: "Web3 Platform Bridging Survey Creators and Respondents",
+    type: "Personal Project",
+    network: {
+      name: "Solana",
+      color: "bg-purple-600",
+    },
+    url: "https://github.com/yebology/survz-dapp.git",
+    job: [
+      "Delivered a seamless Web3 experience by integrating Solana Web3.js and developing the full frontend using React (TypeScript).",
+      "Built end-to-end smart contracts on Solana using Anchor (Rust) for a decentralized Web3 survey platform.",
+    ],
+    skills: ["Rust", "Anchor", "TypeScript", "React", "Solana web3.js"],
+  },
+  {
     name: "Roomie",
     description: "Web3 AI-powered Accommodation Booking Platform",
     type: "Team Project",
@@ -51,15 +138,14 @@ export const projectList = [
       name: "Manta Pacific",
       color: "bg-blue-600",
     },
-    url: "https://github.com/yebology/roomie-summary.git",
+    url: "https://github.com/LouisFernando1204/roomie-dapp",
     job: [
       "Ensured efficient token management using ERC-1155 with Foundry (Solidity).",
       "Enhanced UX by seamlessly connected ABIs with the frontend via Ethers.js.",
       "Enabled secure and frictionless wallet interaction by integrated Reown.",
     ],
     skills: [
-      "Solidity",
-      "Foundry",
+      "Foundry (Solidity)",
       "Layer-2",
       "TypeScript",
       "Ethers.js",
@@ -72,18 +158,17 @@ export const projectList = [
       "Web3 Platform for Converting Waste into $RCYCL Tokens to Purchase NFTs",
     type: "Personal Project",
     network: {
-      name: "Ethereum",
+      name: "Ethereum Sepolia",
       color: "bg-yellow-400",
     },
-    url: "https://github.com/yebology/ecochain-summary.git",
+    url: "https://github.com/yebology/ecochain-dapp.git",
     job: [
       "Ensured efficient token management using ERC-20-721 with Foundry (Solidity).",
       "Enhanced UX by building a fullstack web platform and integrating Ethers.js.",
       "Enabled secure and frictionless wallet interaction by integrated WalletConnect.",
     ],
     skills: [
-      "Solidity",
-      "Foundry",
+      "Foundry (Solidity)",
       "TypeScript",
       "React",
       "Ethers.js",
@@ -91,17 +176,17 @@ export const projectList = [
     ],
   },
   {
-    name: "Survz",
-    description: "Web3 Platform Bridging Survey Creators and Respondents",
+    name: "Finuverse",
+    description: "A Web3 Marketplace for Digital Finance Courses",
     type: "Personal Project",
     network: {
       name: "Solana",
       color: "bg-purple-600",
     },
-    url: "https://github.com/yebology/survz-summary.git",
+    url: "https://github.com/yebology/finuverse-dapp.git",
     job: [
-      "Improved platform efficiency by designing smart contract using Anchor (Rust).",
-      "Enhanced UX by building a fullstack web platform and integrating Solana web3.js.",
+      "Delivered a seamless Web3 experience by integrating Solana Web3.js and developing the full frontend using React (TypeScript).",
+      "Built end-to-end smart contracts on Solana using Anchor (Rust) for a decentralized Web3 survey platform.",
     ],
     skills: ["Rust", "Anchor", "TypeScript", "React", "Solana web3.js"],
   },
@@ -113,7 +198,7 @@ export const projectList = [
       name: "ICP",
       color: "bg-green-600",
     },
-    url: "https://github.com/yebology/bookverse-summary.git",
+    url: "https://github.com/yebology/bookverse-dapp.git",
     job: [
       "Improved platform efficiency by designing smart contract using Motoko.",
       "Secure transactions and streamlined asset management with Internet Identity and Pinata IPFS.",
@@ -121,18 +206,35 @@ export const projectList = [
     skills: ["Motoko", "TypeScript", "Internet Identity"],
   },
   {
-    name: "BlocEstate",
-    description: "Web3 Real Estate Auction Platform in Indonesia",
-    type: "Team Project",
+    name: "Crowdfy",
+    description: "A Web3 Crowdfunding Platform",
+    type: "Personal Project",
     network: {
-      name: "ICP",
-      color: "bg-green-600",
+      name: "Ethereum Sepolia",
+      color: "bg-yellow-400",
     },
-    url: "https://github.com/yebology/blocestate-summary.git",
+    url: "https://github.com/yebology/crowdfy-dapp.git",
     job: [
-      "Enhanced UX by seamlessly connected IDLs with the frontend via Agent.js.",
-      "Secure transactions and streamlined asset management with Plug Wallet and Pinata IPFS.",
+      "Delivered a seamless Web3 experience by handling both blockchain and frontend layers",
+      "Designed and developed smart contract end-to-end using Foundry (Solidity).",
+      "Built the fullstack web platform and integrated Ethers.js to connect the frontend with on-chain smart contract.",
     ],
-    skills: ["JavaScript", "React", "Agent.js", "Pinata", "Plug Wallet"],
+    skills: ["Foundry (Solidity)", "TypeScript", "React", "Ethers.js"],
+  },
+  {
+    name: "EazyVote",
+    description: "A Web3 Voting Platform",
+    type: "Personal Project",
+    network: {
+      name: "Ethereum Sepolia",
+      color: "bg-yellow-400",
+    },
+    url: "https://github.com/yebology/eazyvote-dapp.git",
+    job: [
+      "Delivered a seamless Web3 experience by handling both blockchain and frontend layers",
+      "Designed and developed smart contract end-to-end using Foundry (Solidity).",
+      "Built the fullstack web platform and integrated Ethers.js to connect the frontend with on-chain smart contract.",
+    ],
+    skills: ["Foundry (Solidity)", "JavaScript", "React", "Ethers.js"],
   },
 ];

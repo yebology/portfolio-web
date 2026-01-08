@@ -39,7 +39,7 @@ contract Introduction {
             </h1>
             <h2 className={`text-3xl xl:text-4xl font-semibold text-blue-600`}>
               <Typewriter
-                words={["Blockchain Developer"]}
+                words={["Smart Contract Dev"]}
                 cursor
                 cursorBlinking
                 cursorStyle="|"
@@ -50,11 +50,12 @@ contract Introduction {
             </h2>
             <p className="text-sm lg:text-md xl:text-lg">
               {" "}
-              I'm a curious builder 🛠️ and blockchain enthusiast 🚀 who loves
-              experimenting across networks. To me, blockchain isn’t just
-              code—it’s a game-changer for finance, supply chains, and digital
-              identity. Always exploring new ways to push Web3 forward with
-              fresh ideas! ✨
+              I'm a curious builder 🛠️ and blockchain enthusiast 🚀 with
+              hands-on experience building on{" "}
+              <span className="font-bold">EVM, SVM, and ICP networks</span>. To
+              me, blockchain isn’t just code—it’s a tool to innovate finance,
+              supply chains, and digital identity. Always exploring new ways to
+              push Web3 forward with fresh ideas! ✨
             </p>
             <div className="flex flex-row space-x-2">
               {socialMedia.map((item, _) => (
