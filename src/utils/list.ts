@@ -54,7 +54,7 @@ export const experienceList = [
       "Undertaking an intensive program to earn the AWS Developer Associate (DVA-C02) certification.",
       // "Gained hands-on experience with key AWS services including Lambda, API Gateway, S3, DynamoDB, and IAM.",
     ],
-    skills: ["AWS Developer Associate (DVA-C02)", "Lambda", "S3", "IAM"],
+    skills: ["AWS Developer Associate (DVA-C02)"],
   },
   {
     role: "Fullstack Dev",
