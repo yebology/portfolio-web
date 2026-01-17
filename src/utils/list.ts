@@ -51,13 +51,13 @@ export const experienceList = [
     country: "Malaysia",
     period: "Jan 2026 - Mar 2026",
     jobdesc: [
-      "Undertaking a 6-week intensive program to earn the AWS Developer Associate (DVA-C02) certification.",
-      "Gained hands-on experience with key AWS services including Lambda, API Gateway, S3, DynamoDB, and IAM.",
+      "Undertaking an intensive program to earn the AWS Developer Associate (DVA-C02) certification.",
+      // "Gained hands-on experience with key AWS services including Lambda, API Gateway, S3, DynamoDB, and IAM.",
     ],
     skills: ["AWS Developer Associate (DVA-C02)", "Lambda", "S3", "IAM"],
   },
   {
-    role: "Full-Stack Dev",
+    role: "Fullstack Dev",
     type: "Contract",
     color: "border-indigo-600",
     company: "Liberty Technology Solutions",
@@ -76,7 +76,7 @@ export const experienceList = [
     ],
   },
   {
-    role: "Full-Stack Dev",
+    role: "Fullstack Dev",
     type: "Freelance",
     color: "border-pink-600",
     company: "Ciputra Golf Surabaya",
@@ -91,6 +91,7 @@ export const experienceList = [
       "GORM",
       "PostgreSQL",
       "Docker",
+      "VPS",
       "Next.js (TypeScript)",
     ],
   },
@@ -103,7 +104,8 @@ export const experienceList = [
     period: "Dec 2025 - Feb 2026",
     jobdesc: [
       "Developed the core backend systems for a supermarket in Tulungagung, handling authentication, custom middleware features, store management, and transactions using Golang (Fiber), GORM, and PostgreSQL.",
-      "Managed end-to-end development and deployment using Docker on a VPS, enabling consistent environments and easier maintenance.",
+      "Managed end-to-end development using Docker, enabling consistent environments and easier maintenance.",
+      // "Managed end-to-end development and deployment using Docker on a VPS, enabling consistent environments and easier maintenance.",
     ],
     skills: ["Golang (Fiber)", "GORM", "PostgreSQL", "Docker"],
   },
