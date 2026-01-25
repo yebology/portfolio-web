@@ -84,12 +84,13 @@ export const experienceList = [
     period: "Dec 2025 - Mar 2026",
     jobdesc: [
       "Delivered an end-to-end PWA for one of the largest golf courses in East Java, Indonesia, focusing on weekly and daily reporting management for foremen and supervisors, using Next.js, TypeScript, Golang (Fiber), GORM, and PostgreSQL.",
-      "Managed end-to-end development and deployment using Docker on a VPS, enabling consistent environments and easier maintenance.",
+      "Implemented CI/CD pipelines using GitHub Actions to build Docker images and deploy services to a VPS, reducing manual release steps.",
     ],
     skills: [
       "Golang (Fiber)",
       "GORM",
       "PostgreSQL",
+      "CI/CD",
       "Docker",
       "VPS",
       "Next.js (TypeScript)",
