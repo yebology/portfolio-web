@@ -51,7 +51,7 @@ export const experienceList = [
     country: "Malaysia",
     period: "Jan 2026 - Mar 2026",
     jobdesc: [
-      "• Completed an intensive 6-week preparation program for the AWS Certified Developer – Associate (DVA-C02) certification.",
+      "Completed an intensive 6-week preparation program for the AWS Certified Developer – Associate (DVA-C02) certification.",
       // "Gained hands-on experience with key AWS services including Lambda, API Gateway, S3, DynamoDB, and IAM.",
     ],
     skills: ["AWS Developer Associate (DVA-C02)"],
