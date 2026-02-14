@@ -51,7 +51,7 @@ export const experienceList = [
     country: "Malaysia",
     period: "Jan 2026 - Mar 2026",
     jobdesc: [
-      "Undertaking an intensive program to earn the AWS Developer Associate (DVA-C02) certification.",
+      "• Completed an intensive 6-week preparation program for the AWS Certified Developer – Associate (DVA-C02) certification.",
       // "Gained hands-on experience with key AWS services including Lambda, API Gateway, S3, DynamoDB, and IAM.",
     ],
     skills: ["AWS Developer Associate (DVA-C02)"],
@@ -68,11 +68,11 @@ export const experienceList = [
       "Managed end-to-end development using Docker, enabling consistent environments and easier maintenance.",
     ],
     skills: [
+      "Next.js (TypeScript)",
       "Golang (Fiber)",
       "GORM",
       "PostgreSQL",
       "Docker",
-      "Next.js (TypeScript)",
     ],
   },
   {
@@ -87,13 +87,14 @@ export const experienceList = [
       "Implemented CI/CD pipelines using GitHub Actions to build Docker images and deploy services to a VPS, reducing manual release steps.",
     ],
     skills: [
+      "Next.js (TypeScript)",
       "Golang (Fiber)",
       "GORM",
       "PostgreSQL",
       "CI/CD",
+      "GitHub Actions",
       "Docker",
       "VPS",
-      "Next.js (TypeScript)",
     ],
   },
   {
@@ -104,9 +105,8 @@ export const experienceList = [
     country: "Indonesia",
     period: "Dec 2025 - Feb 2026",
     jobdesc: [
-      "Developed the core backend systems for a supermarket in Tulungagung, handling authentication, custom middleware features, store management, and transactions using Golang (Fiber), GORM, and PostgreSQL.",
+      "Developed the core backend systems for a supermarket in Tulungagung, handling authentication, custom middleware, attendance, and transactions using Golang (Fiber), GORM, and PostgreSQL.",
       "Managed end-to-end development using Docker, enabling consistent environments and easier maintenance.",
-      // "Managed end-to-end development and deployment using Docker on a VPS, enabling consistent environments and easier maintenance.",
     ],
     skills: ["Golang (Fiber)", "GORM", "PostgreSQL", "Docker"],
   },
@@ -118,16 +118,15 @@ export const experienceList = [
     country: "Indonesia",
     period: "Mar 2025 - Dec 2025",
     jobdesc: [
-      "Led project planning and coordination as Project Manager for the final challenge, focusing on helping musculoskeletal therapy patients complete physiotherapist-prescribed home exercises.",
-      "Designed and developed the end-to-end backend system for the final challenge project using Golang (Fiber), GORM, and PostgreSQL, ensuring high performance and maintainable architecture.",
+      "Led project planning and coordination for final challenge aimed at helping musculoskeletal therapy patients adhere to physiotherapist-prescribed home exercise programs, utilizing GitHub Projects for task management.",
+      "Designed and developed the end-to-end backend system for the final challenge project using Golang (Fiber), GORM, and PostgreSQL.",
     ],
     skills: [
-      "Project Management",
-      "Team Building",
-      "Leadership",
       "Golang (Fiber)",
       "GORM",
       "PostgreSQL",
+      "GitHub Projects",
+      "Project Management",
     ],
   },
 ];
