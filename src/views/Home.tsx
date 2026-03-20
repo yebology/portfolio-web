@@ -23,33 +23,33 @@ contract Introduction {
 }`;
 
   return (
-    <div className="relative w-full max-w-full">
-      <div className="flex flex-col lg:flex-row mx-8 md:mx-24 lg:space-x-8">
+    <div className="w-full max-w-full mx-8 md:mx-24">
+      <div className="flex flex-col lg:flex-row lg:space-x-12 items-center">
         <div className="w-full flex-1 order-2 lg:order-none">
-          <div className="flex flex-col space-y-3 mt-8 lg:mt-0 lg:space-y-6">
-            <h1 className="text-xl">Hi! I'm</h1>{" "}
+          <div className="flex flex-col space-y-4 mt-8 lg:mt-0 lg:space-y-6">
+            <p className="text-lg opacity-80">Hi! I'm</p>
             <h1
               className={`text-5xl xl:text-7xl font-bold bg-gradient-to-b ${
                 isDarkTheme
                   ? "from-white to-gray-400/80"
                   : "from-black to-gray-300/80"
-              } bg-clip-text text-transparent`}
+              } bg-clip-text text-transparent leading-tight`}
             >
               Yobel Nathaniel Filipus
             </h1>
-            <h2 className={`text-3xl xl:text-4xl font-semibold text-blue-600`}>
+            <h2 className="text-3xl xl:text-4xl font-semibold text-blue-600">
               <Typewriter
-                words={["Smart Contract Dev"]}
+                words={["Smart Contract Dev", "Fullstack Dev", "Web3 Builder"]}
                 cursor
                 cursorBlinking
                 cursorStyle="|"
                 typeSpeed={100}
-                deleteSpeed={100}
-                delaySpeed={1000}
+                deleteSpeed={80}
+                delaySpeed={1500}
+                loop
               />
             </h2>
-            <p className="text-sm lg:text-md xl:text-lg">
-              {" "}
+            <p className="text-sm lg:text-base xl:text-lg leading-relaxed max-w-2xl opacity-90">
               I'm a curious builder 🛠️ and blockchain enthusiast 🚀 with
               hands-on experience building on{" "}
               <span className="font-bold">EVM, SVM, and ICP networks</span>.
@@ -57,16 +57,25 @@ contract Introduction {
               <span className="font-bold">
                 DAO-based systems, UUPS, and ERC-20-721-1155 smart contracts
               </span>
-              . I'm Always exploring new ways to push Web3 forward with fresh
-              ideas! ✨
+              . Always exploring new ways to push Web3 forward with fresh ideas!
+              ✨
             </p>
-            <div className="flex flex-row space-x-2">
-              {socialMedia.map((item, _) => (
-                <div className="border border-gray-300 rounded-xl p-3 cursor-pointer hover:scale-105 duration-200 hover:bg-slate-400 hover:bg-opacity-50">
-                  <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    <item.icon className="text-sm" />{" "}
-                  </a>
-                </div>
+            <div className="flex flex-row space-x-3 pt-2">
+              {socialMedia.map((item, i) => (
+                <a
+                  key={i}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`border rounded-xl p-3 cursor-pointer transition-all duration-200 hover:scale-110 ${
+                    isDarkTheme
+                      ? "border-slate-100/30 hover:bg-slate-700/50"
+                      : "border-zinc-400 hover:bg-zinc-200"
+                  }`}
+                  aria-label={item.title}
+                >
+                  <item.icon className="text-sm" />
+                </a>
               ))}
             </div>
           </div>

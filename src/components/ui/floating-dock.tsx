@@ -1,9 +1,3 @@
-/**
- * Note: Use position fixed according to your needs
- * Desktop navbar is better positioned at the bottom
- * Mobile navbar is better positioned at bottom right.
- **/
-
 import { cn } from "@/lib/utils";
 import {
   AnimatePresence,
@@ -14,41 +8,45 @@ import {
   useTransform,
 } from "framer-motion";
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
 
 export const FloatingDock = ({
-    items,
-    isDarkTheme,
+  items,
+  isDarkTheme,
   desktopClassName,
 }: {
   items: { title: string; icon: React.ReactNode; href: string }[];
   desktopClassName?: string;
-        mobileClassName?: string;
-  isDarkTheme: boolean
+  isDarkTheme: boolean;
 }) => {
   return (
-    <>
-      <FloatingDockDesktop items={items} className={desktopClassName} isDarkTheme={ isDarkTheme } />
-    </>
+    <FloatingDockDesktop
+      items={items}
+      className={desktopClassName}
+      isDarkTheme={isDarkTheme}
+    />
   );
 };
 
 const FloatingDockDesktop = ({
   items,
   className,
-  isDarkTheme
+  isDarkTheme,
 }: {
   items: { title: string; icon: React.ReactNode; href: string }[];
-    className?: string;
-  isDarkTheme: boolean
+  className?: string;
+  isDarkTheme: boolean;
 }) => {
-  let mouseX = useMotionValue(Infinity);
+  const mouseX = useMotionValue(Infinity);
   return (
     <motion.div
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        `fixed mx-auto bottom-8 md:hidden flex h-16 gap-6 items-end rounded-full border border-opacity-50 ${isDarkTheme ? 'bg-zinc-900 border-slate-100/40' : 'border-zinc-900 bg-slate-100'} px-4 pb-3`,
+        `fixed mx-auto bottom-8 md:hidden flex h-16 gap-6 items-end rounded-full border border-opacity-50 ${
+          isDarkTheme
+            ? "bg-zinc-900 border-slate-100/40"
+            : "border-zinc-900 bg-slate-100"
+        } px-4 pb-3`,
         className
       )}
     >
@@ -70,41 +68,42 @@ function IconContainer({
   icon: React.ReactNode;
   href: string;
 }) {
-  let ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
-  let distance = useTransform(mouseX, (val) => {
-    let bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
-
+  const distance = useTransform(mouseX, (val) => {
+    const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
     return val - bounds.x - bounds.width / 2;
   });
 
-  let widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
-  let heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
-
-  let widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
-  let heightTransformIcon = useTransform(
+  const widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
+  const heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
+  const widthTransformIcon = useTransform(
+    distance,
+    [-150, 0, 150],
+    [20, 40, 20]
+  );
+  const heightTransformIcon = useTransform(
     distance,
     [-150, 0, 150],
     [20, 40, 20]
   );
 
-  let width = useSpring(widthTransform, {
+  const width = useSpring(widthTransform, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
   });
-  let height = useSpring(heightTransform, {
+  const height = useSpring(heightTransform, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
   });
-
-  let widthIcon = useSpring(widthTransformIcon, {
+  const widthIcon = useSpring(widthTransformIcon, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
   });
-  let heightIcon = useSpring(heightTransformIcon, {
+  const heightIcon = useSpring(heightTransformIcon, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
@@ -112,8 +111,17 @@ function IconContainer({
 
   const [hovered, setHovered] = useState(false);
 
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const sectionId = href.replace("#", "");
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <Link to={href}>
+    <a href={href} onClick={handleClick}>
       <motion.div
         ref={ref}
         style={{ width, height }}
@@ -140,6 +148,6 @@ function IconContainer({
           {icon}
         </motion.div>
       </motion.div>
-    </Link>
+    </a>
   );
 }

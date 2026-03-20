@@ -1,22 +1,10 @@
 import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 
 export const navList = [
-  {
-    title: "Home",
-    url: "/",
-  },
-  {
-    title: "Experience",
-    url: "/experience",
-  },
-  // {
-  //   title: "Achievement",
-  //   url: "/achievement",
-  // },
-  {
-    title: "Project",
-    url: "/project",
-  },
+  { title: "Home", sectionId: "home" },
+  { title: "Experience", sectionId: "experience" },
+  { title: "Achievement", sectionId: "achievement" },
+  { title: "Project", sectionId: "project" },
 ];
 
 export const socialMedia = [
@@ -44,7 +32,19 @@ export const socialMedia = [
 
 export const experienceList = [
   {
-    role: "AWS Trainee Dev",
+    role: "Fullstack Dev",
+    type: "Internship",
+    color: "border-green-600",
+    company: "Vallidge Consulting",
+    country: "Singapore",
+    period: "Mar 2026 - Present",
+    jobdesc: [
+      "Implemented an automated trading bot using the Bollinger Bands strategy, with control APIs and background execution built using FastAPI and trade persistence managed via Django ORM backed by MariaDB.",
+    ],
+    skills: ["FastAPI", "Django", "MariaDB"],
+  },
+  {
+    role: "Backend Dev & QA Trainee",
     type: "Contract",
     color: "border-indigo-600",
     company: "axrail.ai",
@@ -52,9 +52,11 @@ export const experienceList = [
     period: "Jan 2026 - Mar 2026",
     jobdesc: [
       "Completed an intensive 6-week preparation program for the AWS Certified Developer – Associate (DVA-C02) certification.",
-      // "Gained hands-on experience with key AWS services including Lambda, API Gateway, S3, DynamoDB, and IAM.",
+      "Developed and deployed serverless applications using Python with 10+ AWS services, provisioning infrastructure via AWS Cloud Development Kit and core services such as AWS Lambda, API Gateway, DynamoDB, and S3.",
+      "Built a generative AI chatbot using Amazon Bedrock integrated with agent orchestration via Strands Agents and tool connectivity through MCP Gateway.",
+      "Automated 180+ test scenarios for a gadget management system using AI-assisted testing with MCP Playwright integrated in Kiro, improving test coverage and execution efficiency."
     ],
-    skills: ["AWS Developer Associate (DVA-C02)"],
+    skills: ["Python", "AWS CloudFormation", "AWS Lambda", "Amazon S3", "Amazon Bedrock", "AWS CodePipeline", "API Gateway", "Amazon DynamoDB", "Amazon Web Services (AWS)", "DVA-C02"],
   },
   {
     role: "Fullstack Dev",
@@ -64,8 +66,8 @@ export const experienceList = [
     country: "USA",
     period: "Dec 2025 - Present",
     jobdesc: [
-      "Delivered an end-to-end website for real-time IoT device management using Next.js, TypeScript, Golang (Fiber), GORM, and PostgreSQL, enabling efficient monitoring and control of connected devices.",
-      "Managed end-to-end development using Docker, enabling consistent environments and easier maintenance.",
+      "Built an end-to-end IoT management platform using Next.js, TypeScript, Golang (Fiber), GORM, and PostgreSQL, supporting real-time device monitoring, control, and user management similar to ThingsBoard.",
+      "Implemented CI/CD pipelines using GitHub Actions to build Docker images and deploy services to a VPS, reducing manual release steps.",
     ],
     skills: [
       "Next.js (TypeScript)",
@@ -73,6 +75,9 @@ export const experienceList = [
       "GORM",
       "PostgreSQL",
       "Docker",
+      "CI/CD",
+      "GitHub Actions",
+      "VPS"
     ],
   },
   {
@@ -91,9 +96,9 @@ export const experienceList = [
       "Golang (Fiber)",
       "GORM",
       "PostgreSQL",
+      "Docker",
       "CI/CD",
       "GitHub Actions",
-      "Docker",
       "VPS",
     ],
   },
@@ -103,7 +108,7 @@ export const experienceList = [
     color: "border-pink-600",
     company: "Tokpin",
     country: "Indonesia",
-    period: "Dec 2025 - Feb 2026",
+    period: "Dec 2025 - Mar 2026",
     jobdesc: [
       "Developed the core backend systems for a supermarket in Tulungagung, handling authentication, custom middleware, attendance, and transactions using Golang (Fiber), GORM, and PostgreSQL.",
       "Managed end-to-end development using Docker, enabling consistent environments and easier maintenance.",

@@ -1,47 +1,43 @@
-import { Route, Routes } from "react-router-dom";
-import { Home } from "./views/Home";
-import { Navbar } from "./components/fixed/Navbar";
 import { useEffect, useState } from "react";
+import { Navbar } from "./components/fixed/Navbar";
+import { Footer } from "./components/fixed/Footer";
+import { FloatingNavbar } from "./components/fixed/FloatingNavbar";
+import { Home } from "./views/Home";
+import { Experience } from "./views/Experience";
 import { Achievement } from "./views/Achievement";
 import { Project } from "./views/Project";
-import { Footer } from "./components/fixed/Footer";
-import { Experience } from "./views/Experience";
-import { FloatingNavbar } from "./components/fixed/FloatingNavbar";
 
 function App() {
-
   const [isDarkTheme, setIsDarkTheme] = useState<boolean>(true);
 
-  useEffect(() => {
-  }, [isDarkTheme]);
+  useEffect(() => {}, [isDarkTheme]);
 
   return (
     <div
       className={`${
         isDarkTheme ? "bg-zinc-900 text-gray-300" : "bg-slate-100 text-gray-600"
-      } overflow-x-hidden flex flex-col font-poppins min-h-screen w-screen xl:max-h-screen`}
+      } overflow-x-hidden flex flex-col font-poppins min-h-screen w-screen`}
     >
-      <Navbar
-        isDarkTheme={isDarkTheme}
-        setIsDarkTheme={setIsDarkTheme}
-      />
-      <div className="flex-1">
-        <Routes>
-          <Route path="/" element={<Home isDarkTheme={isDarkTheme} />} />
-          <Route
-            path="/experience"
-            element={<Experience isDarkTheme={isDarkTheme} />}
-          />
-          <Route
-            path="/achievement"
-            element={<Achievement isDarkTheme={isDarkTheme} />}
-          />
-          <Route
-            path="/project"
-            element={<Project isDarkTheme={isDarkTheme} />}
-          />
-        </Routes>
-      </div>
+      <Navbar isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
+
+      <main className="flex-1">
+        <section id="home" className="min-h-[80vh] flex items-center py-12">
+          <Home isDarkTheme={isDarkTheme} />
+        </section>
+
+        <section id="experience" className="py-20">
+          <Experience isDarkTheme={isDarkTheme} />
+        </section>
+
+        <section id="achievement" className="py-20">
+          <Achievement isDarkTheme={isDarkTheme} />
+        </section>
+
+        <section id="project" className="py-20">
+          <Project isDarkTheme={isDarkTheme} />
+        </section>
+      </main>
+
       <FloatingNavbar isDarkTheme={isDarkTheme} />
       <Footer isDarkTheme={isDarkTheme} />
     </div>
