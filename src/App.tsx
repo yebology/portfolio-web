@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Navbar } from "./components/fixed/Navbar";
 import { Footer } from "./components/fixed/Footer";
 import { FloatingNavbar } from "./components/fixed/FloatingNavbar";
@@ -9,8 +9,6 @@ import { Project } from "./views/Project";
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState<boolean>(true);
-
-  useEffect(() => {}, [isDarkTheme]);
 
   return (
     <div
@@ -25,18 +23,23 @@ function App() {
           <Home isDarkTheme={isDarkTheme} />
         </section>
 
+        <div className={`mx-8 md:mx-24 border-t ${isDarkTheme ? "border-slate-100/10" : "border-zinc-200"}`} />
+
         <section id="experience" className="py-20">
           <Experience isDarkTheme={isDarkTheme} />
         </section>
+
+        <div className={`mx-8 md:mx-24 border-t ${isDarkTheme ? "border-slate-100/10" : "border-zinc-200"}`} />
 
         <section id="achievement" className="py-20">
           <Achievement isDarkTheme={isDarkTheme} />
         </section>
 
+        <div className={`mx-8 md:mx-24 border-t ${isDarkTheme ? "border-slate-100/10" : "border-zinc-200"}`} />
+
         <section id="project" className="py-20">
           <Project isDarkTheme={isDarkTheme} />
-        </section>
-      </main>
+        </section>      </main>
 
       <FloatingNavbar isDarkTheme={isDarkTheme} />
       <Footer isDarkTheme={isDarkTheme} />

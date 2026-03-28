@@ -1,11 +1,16 @@
 import { projectList } from "@/utils/list";
-import React from "react";
+import React, { useState } from "react";
 
 interface ProjectProps {
   isDarkTheme: boolean;
 }
 
+const INITIAL_COUNT = 4;
+
 export const Project: React.FC<ProjectProps> = ({ isDarkTheme }) => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projectList : projectList.slice(0, INITIAL_COUNT);
+
   return (
     <div className="mx-8 md:mx-24">
       <div className="text-center mb-12">
@@ -22,7 +27,7 @@ export const Project: React.FC<ProjectProps> = ({ isDarkTheme }) => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-        {projectList.map((project, index) => (
+        {visibleProjects.map((project, index) => (
           <div
             key={index}
             className={`border p-5 md:p-6 rounded-xl transition-all duration-200 hover:-translate-y-1 ${
@@ -97,6 +102,21 @@ export const Project: React.FC<ProjectProps> = ({ isDarkTheme }) => {
           </div>
         ))}
       </div>
+
+      {projectList.length > INITIAL_COUNT && (
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className={`rounded-full px-6 py-2 text-sm transition-all duration-200 border ${
+              isDarkTheme
+                ? "border-slate-100/20 hover:bg-zinc-800 hover:border-slate-100/40"
+                : "border-zinc-300 hover:bg-zinc-200 hover:border-zinc-400"
+            }`}
+          >
+            {showAll ? "Show Less" : `Show All (${projectList.length})`}
+          </button>
+        </div>
+      )}
     </div>
   );
 };

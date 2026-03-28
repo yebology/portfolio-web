@@ -136,6 +136,94 @@ export const experienceList = [
   },
 ];
 
+import certifate from "../assets/certificate.jpeg";
+import finalis from "../assets/finalis.jpeg";
+import codefest_ig from "../assets/codefest_ig.png";
+import photo_with_lecturer from "../assets/photo_with_lecturer.png";
+import photo_with_lecturer_2 from "../assets/photo_with_lecturer_2.png";
+import winner_photo_wsu from "../assets/winner_photo_wsu.jpeg";
+import photo_with_judges_3 from "../assets/photo_with_judges_3.jpeg";
+import terserah_team_photos from "../assets/terserah_team_photos.jpeg";
+import scholarship_certificate from "../assets/scholarship_certificate.jpeg";
+
+export const achievementList = [
+    {
+    title: "BlocTenderID - Top 7 Finalist of GarudaHacks 6.0 Hackathon",
+    role: "Smart Contract & Web3 Integration Developer",
+    contributions: [
+      "Built DAO-governed ERC-721 smart contracts on Optimism (Ethereum L2) for an anti-nepotism blockchain-based public tender platform using Foundry (Solidity).",
+      "Enabled secure wallet access and frontend interaction with on-chain smart contracts using Xellar & Wagmi.",
+    ],
+    references: [
+      { label: "Finalist Announcement", url: "#" },
+    ],
+    images: [
+      { src: finalis, alt: "Finalist Announcement" },
+    ],
+  },
+  {
+    title: "2nd Place in Codefest ICP Hub Indonesia Hackathon 7.0 (2024)",
+    role: "Web3 Developer",
+    contributions: [
+      "Enhanced UX by seamlessly connected IDLs with the frontend via Agent.js.",
+      "Secure transactions and streamlined asset management with Plug Wallet and Pinata IPFS.",
+    ],
+    references: [
+      { label: "Instagram Post From Universitas Ciputra (Slide 2)", url: "https://www.instagram.com/p/DDWSw-bybzJ/" },
+      { label: "Instagram Post From Codefest Indonesia (Slide 2)", url: "https://www.instagram.com/p/DCYu6fMzAoI/" },
+      { label: "Winner Certificate", url: "https://drive.google.com/file/d/1fgkQQEl2YKP7gZ1k4PLUiSzHU0tn_dyU/view" },
+    ],
+    images: [
+      { src: certifate, alt: "Certificate" },
+      { src: photo_with_lecturer, alt: "Photo with lecturer" },
+      { src: codefest_ig, alt: "Codefest IG" },
+    ],
+  },
+  {
+    title: "1st Place in AI For Impact Innovation Challenge Competition (2023)",
+    role: "App Designer",
+    contributions: [
+      "Crafted an exceptional user experience through creative and innovative app design on A3 paper.",
+    ],
+    references: [
+      { label: "Article on Kompas.com", url: "https://www.kompas.com/edu/read/2023/11/13/094059871/wsu-hadirkan-launch-pad-dorong-inovasi-pelajar-dan-mahasiswa-di-surabaya" },
+      { label: "Instagram Post From Universitas Ciputra (Slide 1)", url: "https://www.instagram.com/p/C2EGCYFht-c/" },
+      { label: "Winner Certificate", url: "https://drive.google.com/file/d/1h7alWPpnG8YCevk7t-HIwhk9ScdwRQ7I/view" },
+    ],
+    images: [
+      { src: winner_photo_wsu, alt: "Winner photo" },
+      { src: photo_with_lecturer_2, alt: "Photo with lecturer" },
+    ],
+  },
+  {
+    title: "3rd Place in UC Venture Startup Games Competition (2022)",
+    role: "App Designer",
+    contributions: [
+      "Crafted an exceptional user experience through creative and innovative app design on A3 paper.",
+    ],
+    references: [
+      { label: "Winner Certificate", url: "https://drive.google.com/file/d/1Vd7nJvJRUzimlYEQB0bLNKkizn-xyyzA/view" },
+    ],
+    images: [
+      { src: terserah_team_photos, alt: "Team photo" },
+      { src: photo_with_judges_3, alt: "Photo with judges" },
+    ],
+  },
+  {
+    title: "Fully Funded 'Star' Scholarship Recipient (2022)",
+    role: "",
+    contributions: [
+      "Awarded a full-tuition scholarship for a four-year undergraduate program at Universitas Ciputra Surabaya and consistently maintained a GPA above 3.5.",
+    ],
+    references: [
+      { label: "Recipient Statement Letter", url: "https://drive.google.com/file/d/19BwmV4WZB6zzz6uM-VKDr9tyMBfn-knU/view" },
+    ],
+    images: [
+      { src: scholarship_certificate, alt: "Scholarship certificate" },
+    ],
+  },
+];
+
 export const projectList = [
   {
     name: "NusaHub",

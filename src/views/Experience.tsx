@@ -1,9 +1,110 @@
-import React from "react";
+import React, { useState } from "react";
 import { experienceList } from "@/utils/list";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 interface ExperienceProps {
   isDarkTheme: boolean;
 }
+
+const VISIBLE_JOBS = 1;
+const VISIBLE_SKILLS = 3;
+
+const ExperienceCard: React.FC<{
+  exp: (typeof experienceList)[number];
+  isDarkTheme: boolean;
+}> = ({ exp, isDarkTheme }) => {
+  const hasMore =
+    exp.jobdesc.length > VISIBLE_JOBS || exp.skills.length > VISIBLE_SKILLS;
+  const [expanded, setExpanded] = useState(false);
+
+  const visibleJobs = expanded ? exp.jobdesc : exp.jobdesc.slice(0, VISIBLE_JOBS);
+  const visibleSkills = expanded ? exp.skills : exp.skills.slice(0, VISIBLE_SKILLS);
+
+  return (
+    <div
+      className={`border p-5 md:p-6 rounded-xl transition-all duration-200 hover:-translate-y-1 ${
+        isDarkTheme
+          ? "border-slate-100/10 hover:border-slate-100/30 bg-zinc-800/30 shadow-lg"
+          : "border-zinc-200 hover:border-zinc-400 bg-white/50 shadow-sm"
+      }`}
+    >
+      <div className="flex flex-col justify-between items-start mb-3">
+        <div className="flex flex-col md:flex-row items-start justify-between md:items-center w-full">
+          <div className="flex flex-row items-center space-x-2">
+            <span className="font-semibold text-md md:text-lg">{exp.role}</span>
+            <div className={`rounded-lg py-0.5 px-2 text-xs border ${exp.color}`}>
+              {exp.type}
+            </div>
+          </div>
+          <span className="text-xs md:text-sm opacity-60 mt-1 md:mt-0">
+            {exp.period}
+          </span>
+        </div>
+        <div className="mt-1 text-xs md:text-sm opacity-50 font-medium">
+          {exp.company} — {exp.country}
+        </div>
+      </div>
+
+      {visibleJobs.length > 0 && (
+        <ul className="mt-3 list-disc ml-5 space-y-1">
+          {visibleJobs.map((job, i) => (
+            <li
+              key={i}
+              className={`text-[13px] leading-relaxed ${
+                isDarkTheme ? "text-slate-400" : "text-zinc-500"
+              }`}
+            >
+              {job}
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {visibleSkills.length > 0 && (
+        <div className="flex flex-wrap gap-2 mt-4">
+          {visibleSkills.map((skill, i) => (
+            <span
+              key={i}
+              className={`rounded-md border px-2.5 py-0.5 text-xs ${
+                isDarkTheme
+                  ? "border-slate-100/15 bg-slate-800/60"
+                  : "border-zinc-300 bg-zinc-100"
+              }`}
+            >
+              {skill}
+            </span>
+          ))}
+          {!expanded && exp.skills.length > VISIBLE_SKILLS && (
+            <span className="text-xs opacity-40 self-center">
+              +{exp.skills.length - VISIBLE_SKILLS} more
+            </span>
+          )}
+        </div>
+      )}
+
+      {hasMore && (
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className={`mt-4 flex items-center gap-1 text-xs transition-colors ${
+            isDarkTheme
+              ? "text-slate-400 hover:text-slate-200"
+              : "text-zinc-500 hover:text-zinc-700"
+          }`}
+        >
+          {expanded ? (
+            <>
+              Show Less <ChevronUp size={14} />
+            </>
+          ) : (
+            <>
+              Show More <ChevronDown size={14} />
+            </>
+          )}
+        </button>
+      )}
+    </div>
+  );
+};
 
 export const Experience: React.FC<ExperienceProps> = ({ isDarkTheme }) => {
   return (
@@ -18,72 +119,14 @@ export const Experience: React.FC<ExperienceProps> = ({ isDarkTheme }) => {
         >
           Experience
         </h2>
-        <p className="mt-2 opacity-60 text-sm">Where I've worked and contributed</p>
+        <p className="mt-2 opacity-60 text-sm">
+          Where I've worked and contributed
+        </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
         {experienceList.map((exp, index) => (
-          <div
-            key={index}
-            className={`border p-5 md:p-6 rounded-xl transition-all duration-200 hover:-translate-y-1 ${
-              isDarkTheme
-                ? "border-slate-100/10 hover:border-slate-100/30 bg-zinc-800/30 shadow-lg"
-                : "border-zinc-200 hover:border-zinc-400 bg-white/50 shadow-sm"
-            }`}
-          >
-            <div className="flex flex-col justify-between items-start mb-3">
-              <div className="flex flex-col md:flex-row items-start justify-between md:items-center w-full">
-                <div className="flex flex-row items-center space-x-2">
-                  <span className="font-semibold text-md md:text-lg">
-                    {exp.role}
-                  </span>
-                  <div
-                    className={`rounded-lg py-0.5 px-2 text-xs border ${exp.color}`}
-                  >
-                    {exp.type}
-                  </div>
-                </div>
-                <span className="text-xs md:text-sm opacity-60 mt-1 md:mt-0">
-                  {exp.period}
-                </span>
-              </div>
-              <div className="mt-1 text-xs md:text-sm opacity-50 font-medium">
-                {exp.company} — {exp.country}
-              </div>
-            </div>
-
-            {exp.jobdesc.length > 0 && (
-              <ul className="mt-3 list-disc ml-5 space-y-1">
-                {exp.jobdesc.map((job, jobIndex) => (
-                  <li
-                    key={jobIndex}
-                    className={`text-[13px] leading-relaxed ${
-                      isDarkTheme ? "text-slate-400" : "text-zinc-500"
-                    }`}
-                  >
-                    {job}
-                  </li>
-                ))}
-              </ul>
-            )}
-
-            {exp.skills.length > 0 && (
-              <div className="flex flex-wrap gap-2 mt-4">
-                {exp.skills.map((skill, i) => (
-                  <span
-                    key={i}
-                    className={`rounded-md border px-2.5 py-0.5 text-xs ${
-                      isDarkTheme
-                        ? "border-slate-100/15 bg-slate-800/60"
-                        : "border-zinc-300 bg-zinc-100"
-                    }`}
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            )}
-          </div>
+          <ExperienceCard key={index} exp={exp} isDarkTheme={isDarkTheme} />
         ))}
       </div>
     </div>
