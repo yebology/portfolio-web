@@ -30,8 +30,8 @@ const ExperienceCard: React.FC<{
     >
       <div className="flex flex-col justify-between items-start mb-3">
         <div className="flex flex-col md:flex-row items-start justify-between md:items-center w-full">
-          <div className="flex flex-row items-center space-x-2">
-            <span className="font-semibold text-md md:text-lg">{exp.role}</span>
+          <div className="flex flex-row items-center space-x-2 flex-wrap">
+            <span className="font-semibold text-sm md:text-lg">{exp.role}</span>
             <div className={`rounded-lg py-0.5 px-2 text-xs border ${exp.color}`}>
               {exp.type}
             </div>

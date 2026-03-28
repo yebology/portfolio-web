@@ -29,7 +29,7 @@ contract Introduction {
           <div className="flex flex-col space-y-4 mt-8 lg:mt-0 lg:space-y-6">
             <p className="text-lg opacity-80">Hi! I'm</p>
             <h1
-              className={`text-5xl xl:text-7xl font-bold bg-gradient-to-b ${
+              className={`text-3xl md:text-5xl xl:text-7xl font-bold bg-gradient-to-b ${
                 isDarkTheme
                   ? "from-white to-gray-400/80"
                   : "from-black to-gray-300/80"
@@ -37,7 +37,7 @@ contract Introduction {
             >
               Yobel Nathaniel Filipus
             </h1>
-            <h2 className="text-3xl xl:text-4xl font-semibold text-blue-600">
+            <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold text-blue-600">
               <Typewriter
                 words={["Smart Contract Dev", "Fullstack Dev", "Web3 Builder"]}
                 cursor

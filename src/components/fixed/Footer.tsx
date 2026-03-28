@@ -7,7 +7,7 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ isDarkTheme }) => {
   return (
     <div
-      className={`mt-12 py-8 border-t ${
+      className={`mt-12 py-8 pb-24 md:pb-8 border-t ${
         isDarkTheme ? "border-slate-100/10" : "border-zinc-200"
       }`}
     >

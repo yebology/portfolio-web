@@ -19,7 +19,7 @@ function App() {
       <Navbar isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
 
       <main className="flex-1">
-        <section id="home" className="min-h-[80vh] flex items-center py-12">
+        <section id="home" className="min-h-[60vh] md:min-h-[80vh] flex items-center py-12">
           <Home isDarkTheme={isDarkTheme} />
         </section>
 

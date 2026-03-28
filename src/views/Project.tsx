@@ -36,10 +36,10 @@ export const Project: React.FC<ProjectProps> = ({ isDarkTheme }) => {
                 : "border-zinc-200 hover:border-zinc-400 bg-white/50 shadow-sm"
             }`}
           >
-            <div className="flex justify-between items-center mb-3">
-              <div className="flex flex-row space-x-2 items-center">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-3">
+              <div className="flex flex-row space-x-2 items-center flex-wrap">
                 <a
-                  className="font-semibold hover:underline underline-offset-4 text-md md:text-lg"
+                  className="font-semibold hover:underline underline-offset-4 text-sm md:text-lg"
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"

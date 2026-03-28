@@ -52,7 +52,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           : ""
       }`}
     >
-      <div className="flex justify-between py-6 items-center mx-8 md:mx-24 max-w-full">
+      <div className="flex justify-between py-4 md:py-6 items-center mx-8 md:mx-24 max-w-full">
         <h1
           className="font-bold text-xl cursor-pointer"
           onClick={() => scrollToSection("home")}
