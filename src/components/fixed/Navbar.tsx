@@ -1,16 +1,10 @@
 import { navList } from "@/utils/list";
+import { useTheme } from "@/context/ThemeContext";
 import { Moon, Sun } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
-interface NavbarProps {
-  isDarkTheme: boolean;
-  setIsDarkTheme: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-export const Navbar: React.FC<NavbarProps> = ({
-  isDarkTheme,
-  setIsDarkTheme,
-}) => {
+export const Navbar: React.FC = () => {
+  const { isDarkTheme, toggleTheme } = useTheme();
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
@@ -86,7 +80,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               ? "border-slate-100/40 hover:bg-slate-800"
               : "border-zinc-400 hover:bg-zinc-200"
           }`}
-          onClick={() => setIsDarkTheme(!isDarkTheme)}
+          onClick={toggleTheme}
           aria-label="Toggle theme"
         >
           {isDarkTheme ? <Moon size={18} /> : <Sun size={18} />}

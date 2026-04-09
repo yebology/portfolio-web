@@ -1,30 +1,31 @@
-import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconMail } from "@tabler/icons-react";
 
 export const navList = [
   { title: "Home", sectionId: "home" },
   { title: "Experience", sectionId: "experience" },
   { title: "Achievement", sectionId: "achievement" },
+  { title: "Certification", sectionId: "certification" },
   { title: "Project", sectionId: "project" },
 ];
 
 export const socialMedia = [
   {
-    icon: Github,
+    icon: IconBrandGithub,
     title: "Github",
     url: "https://github.com/yebology",
   },
   {
-    icon: Linkedin,
+    icon: IconBrandLinkedin,
     title: "Linkedin",
     url: "https://linkedin.com/in/yobelnathanielfilipus",
   },
   {
-    icon: Mail,
+    icon: IconMail,
     title: "Email",
     url: "https://mail.google.com/mail/?view=cm&to=yobelnathaniel12@gmail.com",
   },
   {
-    icon: Instagram,
+    icon: IconBrandInstagram,
     title: "Instagram",
     url: "https://instagram.com/yobelnathaniel01",
   },
@@ -32,7 +33,7 @@ export const socialMedia = [
 
 export const experienceList = [
   {
-    role: "Fullstack Dev",
+    role: "Fullstack Engineer",
     type: "Internship",
     color: "border-green-600",
     company: "Vallidge Consulting",
@@ -43,23 +44,8 @@ export const experienceList = [
     ],
     skills: ["FastAPI", "Django", "MariaDB"],
   },
-  {
-    role: "Backend Dev & QA Trainee",
-    type: "Contract",
-    color: "border-indigo-600",
-    company: "axrail.ai",
-    country: "Malaysia",
-    period: "Jan 2026 - Mar 2026",
-    jobdesc: [
-      "Completed an intensive 6-week preparation program for the AWS Certified Developer – Associate (DVA-C02) certification.",
-      "Developed and deployed serverless applications using Python with 10+ AWS services, provisioning infrastructure via AWS Cloud Development Kit and core services such as AWS Lambda, API Gateway, DynamoDB, and S3.",
-      "Built a generative AI chatbot using Amazon Bedrock integrated with agent orchestration via Strands Agents and tool connectivity through MCP Gateway.",
-      "Automated 180+ test scenarios for a gadget management system using AI-assisted testing with MCP Playwright integrated in Kiro, improving test coverage and execution efficiency."
-    ],
-    skills: ["Python", "AWS CloudFormation", "AWS Lambda", "Amazon S3", "Amazon Bedrock", "AWS CodePipeline", "API Gateway", "Amazon DynamoDB", "Amazon Web Services (AWS)", "DVA-C02"],
-  },
-  {
-    role: "Fullstack Dev",
+    {
+    role: "Software Engineer",
     type: "Contract",
     color: "border-indigo-600",
     company: "Liberty Technology Solutions",
@@ -81,12 +67,26 @@ export const experienceList = [
     ],
   },
   {
-    role: "Fullstack Dev",
+    role: "Backend Engineer & QA Trainee",
+    type: "Contract",
+    color: "border-indigo-600",
+    company: "axrail.ai",
+    country: "Malaysia",
+    period: "Jan 2026 - Apr 2026",
+    jobdesc: [
+      "Developed and deployed serverless applications using Python across 10+ AWS services, including AWS Lambda, API Gateway, DynamoDB, Bedrock, and S3, with infrastructure provisioned via AWS CDK.",  
+      "Conducted performance testing using k6 (smoke, load, stress, volume), validating system performance improvements of up to 87% latency reduction and 68% throughput increase, including significant reduction in error rates.",
+      "Automated 180+ test scenarios using AI-assisted testing (MCP Playwright in Kiro), improving test coverage and execution efficiency."
+    ],
+    skills: ["Python", "AWS CloudFormation", "AWS Lambda", "Amazon S3", "Amazon Bedrock", "AWS CodePipeline", "API Gateway", "Amazon DynamoDB", "Amazon Web Services (AWS)", "DVA-C02"],
+  },
+  {
+    role: "Fullstack Developer",
     type: "Freelance",
     color: "border-pink-600",
     company: "Ciputra Golf Surabaya",
     country: "Indonesia",
-    period: "Dec 2025 - Mar 2026",
+    period: "Dec 2025 - Apr 2026",
     jobdesc: [
       "Delivered an end-to-end PWA for one of the largest golf courses in East Java, Indonesia, focusing on weekly and daily reporting management for foremen and supervisors, using Next.js, TypeScript, Golang (Fiber), GORM, and PostgreSQL.",
       "Implemented CI/CD pipelines using GitHub Actions to build Docker images and deploy services to a VPS, reducing manual release steps.",
@@ -103,7 +103,7 @@ export const experienceList = [
     ],
   },
   {
-    role: "Backend Dev",
+    role: "Backend Developer",
     type: "Freelance",
     color: "border-pink-600",
     company: "Tokpin",
@@ -116,7 +116,7 @@ export const experienceList = [
     skills: ["Golang (Fiber)", "GORM", "PostgreSQL", "Docker"],
   },
   {
-    role: "PM & Backend Dev",
+    role: "Project Manager & Backend Developer",
     type: "Internship",
     color: "border-green-600",
     company: "Apple Developer Academy @UC Cohort 2025",
@@ -358,21 +358,6 @@ export const projectList = [
     ],
   },
   {
-    name: "Finuverse",
-    description: "A Web3 Marketplace for Digital Finance Courses",
-    type: "Personal Project",
-    network: {
-      name: "Solana",
-      color: "bg-purple-600",
-    },
-    url: "https://github.com/yebology/finuverse-dapp.git",
-    job: [
-      "Delivered a seamless Web3 experience by integrating Solana Web3.js and developing the full frontend using React (TypeScript).",
-      "Built end-to-end smart contracts on Solana using Anchor (Rust) for a decentralized Web3 survey platform.",
-    ],
-    skills: ["Rust", "Anchor", "TypeScript", "React", "Solana web3.js"],
-  },
-  {
     name: "Book-Verse",
     description: "Web3 Platform Bridging Book Authors and Readers",
     type: "Team Project",
@@ -387,36 +372,16 @@ export const projectList = [
     ],
     skills: ["Motoko", "TypeScript", "Internet Identity"],
   },
+];
+
+export const certificationList = [
   {
-    name: "Crowdfy",
-    description: "A Web3 Crowdfunding Platform",
-    type: "Personal Project",
-    network: {
-      name: "Ethereum",
-      color: "bg-yellow-400",
-    },
-    url: "https://github.com/yebology/crowdfy-dapp.git",
-    job: [
-      "Delivered a seamless Web3 experience by handling both blockchain and frontend layers",
-      "Designed and developed smart contract end-to-end using Foundry (Solidity).",
-      "Built the fullstack web platform and integrated Ethers.js to connect the frontend with on-chain smart contract.",
-    ],
-    skills: ["Foundry (Solidity)", "TypeScript", "React", "Ethers.js"],
-  },
-  {
-    name: "EazyVote",
-    description: "A Web3 Voting Platform",
-    type: "Personal Project",
-    network: {
-      name: "Ethereum",
-      color: "bg-yellow-400",
-    },
-    url: "https://github.com/yebology/eazyvote-dapp.git",
-    job: [
-      "Delivered a seamless Web3 experience by handling both blockchain and frontend layers",
-      "Designed and developed smart contract end-to-end using Foundry (Solidity).",
-      "Built the fullstack web platform and integrated Ethers.js to connect the frontend with on-chain smart contract.",
-    ],
-    skills: ["Foundry (Solidity)", "JavaScript", "React", "Ethers.js"],
+    name: "AWS Certified Developer – Associate (DVA-C02)",
+    issuer: "Amazon Web Services (AWS)",
+    issued: "Feb 2026",
+    expires: "Feb 2029",
+    credentialId: "b7e7a145-4d18-4964-afff-785fa1d5a7f5",
+    url: "https://www.credly.com/badges/b7e7a145-4d18-4964-afff-785fa1d5a7f5/public_url",
+    badge: "https://images.credly.com/size/680x680/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png",
   },
 ];

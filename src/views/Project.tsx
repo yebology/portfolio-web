@@ -1,13 +1,12 @@
 import { projectList } from "@/utils/list";
+import { useTheme } from "@/context/ThemeContext";
 import React, { useState } from "react";
-
-interface ProjectProps {
-  isDarkTheme: boolean;
-}
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const INITIAL_COUNT = 4;
 
-export const Project: React.FC<ProjectProps> = ({ isDarkTheme }) => {
+export const Project: React.FC = () => {
+  const { isDarkTheme } = useTheme();
   const [showAll, setShowAll] = useState(false);
   const visibleProjects = showAll ? projectList : projectList.slice(0, INITIAL_COUNT);
 
@@ -107,13 +106,21 @@ export const Project: React.FC<ProjectProps> = ({ isDarkTheme }) => {
         <div className="flex justify-center mt-8">
           <button
             onClick={() => setShowAll(!showAll)}
-            className={`rounded-full px-6 py-2 text-sm transition-all duration-200 border ${
+            className={`flex items-center gap-1 rounded-full px-6 py-2 text-sm transition-all duration-200 border ${
               isDarkTheme
                 ? "border-slate-100/20 hover:bg-zinc-800 hover:border-slate-100/40"
                 : "border-zinc-300 hover:bg-zinc-200 hover:border-zinc-400"
             }`}
           >
-            {showAll ? "Show Less" : `Show All (${projectList.length})`}
+            {showAll ? (
+              <>
+                Show Less <ChevronUp size={14} />
+              </>
+            ) : (
+              <>
+                Show More ({projectList.length - INITIAL_COUNT} more) <ChevronDown size={14} />
+              </>
+            )}
           </button>
         </div>
       )}

@@ -6,8 +6,7 @@ import { IconCheck, IconCopy } from "@tabler/icons-react";
 
 type CodeBlockProps = {
   language: string;
-    filename: string;
-    isDarkTheme: boolean;
+  filename: string;
   highlightLines?: number[];
 } & (
   | {
@@ -30,8 +29,7 @@ export const CodeBlock = ({
   filename,
   code,
   highlightLines = [],
-    tabs = [],
-  isDarkTheme
+  tabs = [],
 }: CodeBlockProps) => {
   const [copied, setCopied] = React.useState(false);
   const [activeTab, setActiveTab] = React.useState(0);
@@ -56,7 +54,7 @@ export const CodeBlock = ({
     : highlightLines;
 
   return (
-      <div className={`cursor-pointer relative lg:max-w-md xl:max-w-full overflow-x-auto rounded-lg ${isDarkTheme ? 'bg-slate-900' : 'bg-slate-900'} p-4 font-mono text-sm`}>
+    <div className="cursor-pointer relative lg:max-w-md xl:max-w-full overflow-x-auto rounded-lg bg-slate-900 p-4 font-mono text-sm">
       <div className="flex flex-col gap-2">
         {tabsExist && (
           <div className="flex overflow-x-auto">
@@ -94,7 +92,7 @@ export const CodeBlock = ({
           margin: 0,
           padding: 0,
           background: "transparent",
-          fontSize: "0.875rem", // text-sm equivalent
+          fontSize: "0.875rem",
         }}
         wrapLines={true}
         showLineNumbers={true}

@@ -1,10 +1,9 @@
 import React from "react";
+import { useTheme } from "@/context/ThemeContext";
 
-interface FooterProps {
-  isDarkTheme: boolean;
-}
+export const Footer: React.FC = () => {
+  const { isDarkTheme } = useTheme();
 
-export const Footer: React.FC<FooterProps> = ({ isDarkTheme }) => {
   return (
     <div
       className={`mt-12 py-8 pb-24 md:pb-8 border-t ${

@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import { experienceList } from "@/utils/list";
+import { useTheme } from "@/context/ThemeContext";
 import { ChevronDown, ChevronUp } from "lucide-react";
-
-interface ExperienceProps {
-  isDarkTheme: boolean;
-}
 
 const VISIBLE_JOBS = 1;
 const VISIBLE_SKILLS = 3;
 
 const ExperienceCard: React.FC<{
   exp: (typeof experienceList)[number];
-  isDarkTheme: boolean;
-}> = ({ exp, isDarkTheme }) => {
+}> = ({ exp }) => {
+  const { isDarkTheme } = useTheme();
   const hasMore =
     exp.jobdesc.length > VISIBLE_JOBS || exp.skills.length > VISIBLE_SKILLS;
   const [expanded, setExpanded] = useState(false);
@@ -22,35 +19,35 @@ const ExperienceCard: React.FC<{
 
   return (
     <div
-      className={`border p-5 md:p-6 rounded-xl transition-all duration-200 hover:-translate-y-1 ${
+      className={`border p-4 md:p-6 rounded-xl transition-all duration-200 hover:-translate-y-1 ${
         isDarkTheme
           ? "border-slate-100/10 hover:border-slate-100/30 bg-zinc-800/30 shadow-lg"
           : "border-zinc-200 hover:border-zinc-400 bg-white/50 shadow-sm"
       }`}
     >
-      <div className="flex flex-col justify-between items-start mb-3">
-        <div className="flex flex-col md:flex-row items-start justify-between md:items-center w-full">
-          <div className="flex flex-row items-center space-x-2 flex-wrap">
-            <span className="font-semibold text-sm md:text-lg">{exp.role}</span>
-            <div className={`rounded-lg py-0.5 px-2 text-xs border ${exp.color}`}>
+      <div className="flex flex-col justify-between items-start mb-2">
+        <div className="flex flex-col md:flex-row items-start justify-between md:items-center w-full gap-1">
+          <div className="flex flex-row items-center gap-2 flex-wrap">
+            <span className="font-semibold text-[13px] md:text-lg leading-snug">{exp.role}</span>
+            <div className={`rounded-lg py-0.5 px-2 text-[10px] md:text-xs border whitespace-nowrap ${exp.color}`}>
               {exp.type}
             </div>
           </div>
-          <span className="text-xs md:text-sm opacity-60 mt-1 md:mt-0">
+          <span className="text-[11px] md:text-sm opacity-60">
             {exp.period}
           </span>
         </div>
-        <div className="mt-1 text-xs md:text-sm opacity-50 font-medium">
+        <div className="mt-0.5 text-[11px] md:text-sm opacity-50 font-medium">
           {exp.company} — {exp.country}
         </div>
       </div>
 
       {visibleJobs.length > 0 && (
-        <ul className="mt-3 list-disc ml-5 space-y-1">
+        <ul className="mt-2 list-disc ml-5 space-y-1">
           {visibleJobs.map((job, i) => (
             <li
               key={i}
-              className={`text-[13px] leading-relaxed ${
+              className={`text-[12px] md:text-[13px] leading-relaxed ${
                 isDarkTheme ? "text-slate-400" : "text-zinc-500"
               }`}
             >
@@ -61,11 +58,11 @@ const ExperienceCard: React.FC<{
       )}
 
       {visibleSkills.length > 0 && (
-        <div className="flex flex-wrap gap-2 mt-4">
+        <div className="flex flex-wrap gap-1.5 mt-3">
           {visibleSkills.map((skill, i) => (
             <span
               key={i}
-              className={`rounded-md border px-2.5 py-0.5 text-xs ${
+              className={`rounded-md border px-2 py-0.5 text-[11px] md:text-xs ${
                 isDarkTheme
                   ? "border-slate-100/15 bg-slate-800/60"
                   : "border-zinc-300 bg-zinc-100"
@@ -106,7 +103,9 @@ const ExperienceCard: React.FC<{
   );
 };
 
-export const Experience: React.FC<ExperienceProps> = ({ isDarkTheme }) => {
+export const Experience: React.FC = () => {
+  const { isDarkTheme } = useTheme();
+
   return (
     <div className="mx-8 md:mx-24">
       <div className="text-center mb-12">
@@ -126,7 +125,7 @@ export const Experience: React.FC<ExperienceProps> = ({ isDarkTheme }) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
         {experienceList.map((exp, index) => (
-          <ExperienceCard key={index} exp={exp} isDarkTheme={isDarkTheme} />
+          <ExperienceCard key={index} exp={exp} />
         ))}
       </div>
     </div>

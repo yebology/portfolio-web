@@ -1,13 +1,12 @@
 import { CodeBlock } from "@/components/ui/code-block";
 import { socialMedia } from "@/utils/list";
+import { useTheme } from "@/context/ThemeContext";
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 
-interface HomeProps {
-  isDarkTheme: boolean;
-}
+export const Home: React.FC = () => {
+  const { isDarkTheme } = useTheme();
 
-export const Home: React.FC<HomeProps> = ({ isDarkTheme }) => {
   const code = `// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
 
@@ -85,7 +84,6 @@ contract Introduction {
             code={code}
             language="sol"
             filename="Introduction.sol"
-            isDarkTheme={isDarkTheme}
           />
         </div>
       </div>

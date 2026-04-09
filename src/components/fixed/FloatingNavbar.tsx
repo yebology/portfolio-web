@@ -1,26 +1,24 @@
 import {
   IconBriefcase,
+  IconCertificate,
   IconCode,
   IconHome,
   IconTrophy,
 } from "@tabler/icons-react";
 import React, { useEffect, useState } from "react";
 import { navList } from "@/utils/list";
-
-interface FloatingNavbarProps {
-  isDarkTheme: boolean;
-}
+import { useTheme } from "@/context/ThemeContext";
 
 const icons: Record<string, React.ReactNode> = {
   home: <IconHome size={20} />,
   experience: <IconBriefcase size={20} />,
   achievement: <IconTrophy size={20} />,
+  certification: <IconCertificate size={20} />,
   project: <IconCode size={20} />,
 };
 
-export const FloatingNavbar: React.FC<FloatingNavbarProps> = ({
-  isDarkTheme,
-}) => {
+export const FloatingNavbar: React.FC = () => {
+  const { isDarkTheme } = useTheme();
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {

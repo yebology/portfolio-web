@@ -1,6 +1,7 @@
 import { Timeline } from "@/components/ui/timeline";
 import { ImageLightbox } from "@/components/ui/image-lightbox";
 import { achievementList } from "@/utils/list";
+import { useTheme } from "@/context/ThemeContext";
 import {
   a_style,
   grid_style,
@@ -13,11 +14,8 @@ import {
 } from "@/utils/style_helper";
 import React, { useState } from "react";
 
-interface AchievementProps {
-  isDarkTheme: boolean;
-}
-
-export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
+export const Achievement: React.FC = () => {
+  const { isDarkTheme } = useTheme();
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
   const data = achievementList.map((item) => ({
@@ -60,6 +58,7 @@ export const Achievement: React.FC<AchievementProps> = ({ isDarkTheme }) => {
               alt={img.alt}
               width={image_width}
               height={image_height}
+              loading="lazy"
               className={`${img_style} cursor-pointer hover:opacity-80 transition-opacity`}
               onClick={() => setLightbox({ src: img.src, alt: img.alt })}
             />
