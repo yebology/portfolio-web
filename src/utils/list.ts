@@ -48,7 +48,7 @@ export const experienceList = [
     role: "Software Engineer",
     type: "Contract",
     color: "border-indigo-600",
-    company: "Liberty Technology Solutions",
+    company: "Liberty Tech",
     country: "USA",
     period: "Dec 2025 - Present",
     jobdesc: [
@@ -84,7 +84,7 @@ export const experienceList = [
     role: "Fullstack Developer",
     type: "Freelance",
     color: "border-pink-600",
-    company: "Ciputra Golf Surabaya",
+    company: "Ciputra Golf Club & Hotel Surabaya",
     country: "Indonesia",
     period: "Dec 2025 - Apr 2026",
     jobdesc: [
@@ -119,7 +119,7 @@ export const experienceList = [
     role: "Project Manager & Backend Developer",
     type: "Internship",
     color: "border-green-600",
-    company: "Apple Developer Academy @UC Cohort 2025",
+    company: "Apple Developer Academy @UC",
     country: "Indonesia",
     period: "Mar 2025 - Dec 2025",
     jobdesc: [
@@ -135,8 +135,6 @@ export const experienceList = [
     ],
   },
 ];
-
-import certifate from "../assets/certificate.jpeg";
 import finalis from "../assets/finalis.jpeg";
 import codefest_ig from "../assets/codefest_ig.png";
 import photo_with_lecturer from "../assets/photo_with_lecturer.png";
