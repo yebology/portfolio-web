@@ -135,6 +135,7 @@ export const experienceList = [
     ],
   },
 ];
+import certifate from "../assets/certificate.jpeg";
 import finalis from "../assets/finalis.jpeg";
 import codefest_ig from "../assets/codefest_ig.png";
 import photo_with_lecturer from "../assets/photo_with_lecturer.png";
