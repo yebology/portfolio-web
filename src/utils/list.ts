@@ -225,6 +225,32 @@ export const achievementList = [
 
 export const projectList = [
   {
+    name: "Miora AI",
+    description:
+      "Web3 Trading Reputation Protocol on Base That Analyzes Wallets, Publishes Scores On-Chain via EAS Attestations, and Runs AI Bots That Trade Autonomously Based on Top Wallets.",
+    type: "Personal Project",
+    network: {
+      name: "Base",
+      color: "bg-blue-500",
+    },
+    url: "https://github.com/yebology/miora-ai",
+    job: [
+      "Built a multi-factor scoring engine with FIFO PnL matching, publishing on-chain reputation via EAS on Base Sepolia.",
+      "Developed AI trading bots (Wallet Bot & Consensus Bot) powered by Coinbase AgentKit with CDP Server Wallets.",
+      "Handled end-to-end development: Next.js frontend, Go (Fiber) backend, Python (FastAPI) agent sidecar, and PostgreSQL.",
+    ],
+    skills: [
+      "Next.js (TypeScript)",
+      "Golang (Fiber)",
+      "Python (FastAPI)",
+      "Coinbase AgentKit",
+      "EAS",
+      "PostgreSQL",
+      "Docker",
+      "Google Gemini",
+    ],
+  },
+  {
     name: "NusaHub",
     description:
       "Web3 Crowdfunding Platform Connecting Indonesian Game Developers with Global Investors through Milestone-Based Funding and Anti-Fraud Investor Voting.",

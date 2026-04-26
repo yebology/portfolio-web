@@ -4,6 +4,122 @@ import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const INITIAL_COUNT = 4;
+const VISIBLE_JOBS = 1;
+const VISIBLE_SKILLS = 3;
+
+const ProjectCard: React.FC<{
+  project: (typeof projectList)[number];
+}> = ({ project }) => {
+  const { isDarkTheme } = useTheme();
+  const hasMore =
+    project.job.length > VISIBLE_JOBS || project.skills.length > VISIBLE_SKILLS;
+  const [expanded, setExpanded] = useState(false);
+
+  const visibleJobs = expanded ? project.job : project.job.slice(0, VISIBLE_JOBS);
+  const visibleSkills = expanded
+    ? project.skills
+    : project.skills.slice(0, VISIBLE_SKILLS);
+
+  return (
+    <div
+      className={`border p-5 md:p-6 rounded-xl transition-all duration-200 hover:-translate-y-1 ${
+        isDarkTheme
+          ? "border-slate-100/10 hover:border-slate-100/30 bg-zinc-800/30 shadow-lg"
+          : "border-zinc-200 hover:border-zinc-400 bg-white/50 shadow-sm"
+      }`}
+    >
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-3">
+        <div className="flex flex-row space-x-2 items-center flex-wrap">
+          <a
+            className="font-semibold hover:underline underline-offset-4 text-sm md:text-lg"
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {project.name}
+          </a>
+          <div
+            className={`rounded-lg py-0.5 px-2 text-xs border ${
+              project.type === "Personal Project"
+                ? "border-indigo-600"
+                : "border-pink-500"
+            }`}
+          >
+            {project.type}
+          </div>
+        </div>
+        <div className="flex flex-row items-center space-x-1.5">
+          <div
+            className={`rounded-full size-2 ${project.network.color}`}
+          />
+          <span className="text-xs opacity-70">{project.network.name}</span>
+        </div>
+      </div>
+
+      <p className="text-[13px] leading-relaxed mb-3 opacity-80">
+        {project.description}
+      </p>
+
+      {visibleJobs.length > 0 && (
+        <ul className="mt-2 list-disc ml-5 space-y-1">
+          {visibleJobs.map((job, jobIndex) => (
+            <li
+              key={jobIndex}
+              className={`text-[12px] md:text-[13px] leading-relaxed ${
+                isDarkTheme ? "text-slate-400" : "text-zinc-500"
+              }`}
+            >
+              {job}
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {visibleSkills.length > 0 && (
+        <div className="flex flex-wrap gap-1.5 mt-3">
+          {visibleSkills.map((skill, i) => (
+            <span
+              key={i}
+              className={`rounded-md border px-2 py-0.5 text-[11px] md:text-xs ${
+                isDarkTheme
+                  ? "border-slate-100/15 bg-slate-800/60"
+                  : "border-zinc-300 bg-zinc-100"
+              }`}
+            >
+              {skill}
+            </span>
+          ))}
+          {!expanded && project.skills.length > VISIBLE_SKILLS && (
+            <span className="text-xs opacity-40 self-center">
+              +{project.skills.length - VISIBLE_SKILLS} more
+            </span>
+          )}
+        </div>
+      )}
+
+      {hasMore && (
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className={`mt-4 flex items-center gap-1 text-xs transition-colors ${
+            isDarkTheme
+              ? "text-slate-400 hover:text-slate-200"
+              : "text-zinc-500 hover:text-zinc-700"
+          }`}
+        >
+          {expanded ? (
+            <>
+              Show Less <ChevronUp size={14} />
+            </>
+          ) : (
+            <>
+              Show More <ChevronDown size={14} />
+            </>
+          )}
+        </button>
+      )}
+    </div>
+  );
+};
 
 export const Project: React.FC = () => {
   const { isDarkTheme } = useTheme();
@@ -27,78 +143,7 @@ export const Project: React.FC = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
         {visibleProjects.map((project, index) => (
-          <div
-            key={index}
-            className={`border p-5 md:p-6 rounded-xl transition-all duration-200 hover:-translate-y-1 ${
-              isDarkTheme
-                ? "border-slate-100/10 hover:border-slate-100/30 bg-zinc-800/30 shadow-lg"
-                : "border-zinc-200 hover:border-zinc-400 bg-white/50 shadow-sm"
-            }`}
-          >
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-3">
-              <div className="flex flex-row space-x-2 items-center flex-wrap">
-                <a
-                  className="font-semibold hover:underline underline-offset-4 text-sm md:text-lg"
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {project.name}
-                </a>
-                <div
-                  className={`rounded-lg py-0.5 px-2 text-xs border ${
-                    project.type === "Personal Project"
-                      ? "border-indigo-600"
-                      : "border-pink-500"
-                  }`}
-                >
-                  {project.type}
-                </div>
-              </div>
-              <div className="flex flex-row items-center space-x-1.5">
-                <div
-                  className={`rounded-full size-2 ${project.network.color}`}
-                />
-                <span className="text-xs opacity-70">{project.network.name}</span>
-              </div>
-            </div>
-
-            <p className="text-[13px] leading-relaxed mb-3 opacity-80">
-              {project.description}
-            </p>
-
-            {project.job.length > 0 && (
-              <ul className="mt-2 list-disc ml-5 space-y-1">
-                {project.job.map((job, jobIndex) => (
-                  <li
-                    key={jobIndex}
-                    className={`text-[13px] leading-relaxed ${
-                      isDarkTheme ? "text-slate-400" : "text-zinc-500"
-                    }`}
-                  >
-                    {job}
-                  </li>
-                ))}
-              </ul>
-            )}
-
-            {project.skills.length > 0 && (
-              <div className="flex flex-wrap gap-2 mt-4">
-                {project.skills.map((skill, i) => (
-                  <span
-                    key={i}
-                    className={`rounded-md border px-2.5 py-0.5 text-xs ${
-                      isDarkTheme
-                        ? "border-slate-100/15 bg-slate-800/60"
-                        : "border-zinc-300 bg-zinc-100"
-                    }`}
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            )}
-          </div>
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
 
