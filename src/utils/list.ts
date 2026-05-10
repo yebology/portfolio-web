@@ -33,6 +33,18 @@ export const socialMedia = [
 
 export const experienceList = [
   {
+    role: "Backend Engineer",
+    type: "Contract",
+    color: "border-indigo-600",
+    company: "axrail.ai",
+    country: "Malaysia",
+    period: "Apr 2026 - Present",
+    jobdesc: [
+      "Developing internal backend systems and services using Python and AWS infrastructure.",
+    ],
+    skills: ["Python", "Amazon Web Services (AWS)"],
+  },
+  {
     role: "Fullstack Engineer",
     type: "Internship",
     color: "border-green-600",
