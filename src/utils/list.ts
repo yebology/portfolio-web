@@ -67,7 +67,7 @@ export const experienceList = [
     ],
   },
   {
-    role: "Backend Engineer & QA Trainee",
+    role: "Backend Engineer Trainee",
     type: "Contract",
     color: "border-indigo-600",
     company: "axrail.ai",
@@ -225,6 +225,33 @@ export const achievementList = [
 
 export const projectList = [
   {
+    name: "Killswitch",
+    description:
+      "Real-time Exploit Detection and On-Chain Auto-Pause (Circuit Breaker) System for Solana DeFi Protocols — The Emergency Stop Button That DeFi Is Missing.",
+    type: "Personal Project",
+    network: {
+      name: "Solana",
+      color: "bg-purple-600",
+    },
+    url: "https://github.com/yebology/killswitch",
+    job: [
+      "Built a Sentinel monitoring service (Python + FastAPI) that evaluates every transaction against configurable invariant rules with sub-second detection latency.",
+      "Developed an on-chain Guardian Program (Anchor/Rust) with circuit breaker that auto-pauses protocols when thresholds are breached.",
+      "Implemented severity escalation logic that correlates multiple signals and auto-escalates to CRITICAL when 2+ rules are in warning state simultaneously.",
+      "Handled end-to-end development: Next.js dashboard, Python backend, Anchor smart contract, Telegram alerts, and Docker infrastructure.",
+    ],
+    skills: [
+      "Python (FastAPI)",
+      "Anchor (Rust)",
+      "Next.js (TypeScript)",
+      "PostgreSQL",
+      "Solana",
+      "Docker",
+      "WebSocket",
+      "Telegram Bot API",
+    ],
+  },
+  {
     name: "Miora AI",
     description:
       "Web3 Trading Reputation Protocol on Base That Analyzes Wallets, Publishes Scores On-Chain via EAS Attestations, and Runs AI Bots That Trade Autonomously Based on Top Wallets.",
@@ -322,21 +349,7 @@ export const projectList = [
       "Wagmi",
     ],
   },
-  {
-    name: "Survz",
-    description: "Web3 Platform Bridging Survey Creators and Respondents",
-    type: "Personal Project",
-    network: {
-      name: "Solana",
-      color: "bg-purple-600",
-    },
-    url: "https://github.com/yebology/survz-dapp.git",
-    job: [
-      "Delivered a seamless Web3 experience by integrating Solana Web3.js and developing the full frontend using React (TypeScript).",
-      "Built end-to-end smart contracts on Solana using Anchor (Rust) for a decentralized Web3 survey platform.",
-    ],
-    skills: ["Rust", "Anchor", "TypeScript", "React", "Solana web3.js"],
-  },
+
   {
     name: "Roomie",
     description: "Web3 AI-powered Accommodation Booking Platform",
@@ -359,29 +372,7 @@ export const projectList = [
       "Reown",
     ],
   },
-  {
-    name: "EcoChain",
-    description:
-      "Web3 Platform for Converting Waste into $RCYCL Tokens to Purchase NFTs",
-    type: "Personal Project",
-    network: {
-      name: "Ethereum",
-      color: "bg-yellow-400",
-    },
-    url: "https://github.com/yebology/ecochain-dapp.git",
-    job: [
-      "Ensured efficient token management using ERC-20-721 with Foundry (Solidity).",
-      "Enhanced UX by building a fullstack web platform and integrating Ethers.js.",
-      "Enabled secure and frictionless wallet interaction by integrated WalletConnect.",
-    ],
-    skills: [
-      "Foundry (Solidity)",
-      "TypeScript",
-      "React",
-      "Ethers.js",
-      "WalletConnect",
-    ],
-  },
+
   {
     name: "Book-Verse",
     description: "Web3 Platform Bridging Book Authors and Readers",
