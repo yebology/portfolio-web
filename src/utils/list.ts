@@ -237,9 +237,61 @@ export const achievementList = [
 
 export const projectList = [
   {
+    name: "KirimPay",
+    description:
+      "Programmable remittance that saves Indonesian migrant workers Rp14T+/year in fees — with auto-split savings, on-chain credit scoring, and AI-timed transfers.",
+    type: "Personal Project",
+    network: {
+      name: "Stellar",
+      color: "bg-indigo-500",
+    },
+    url: "https://github.com/yebology/kirimpay",
+    job: [
+      "Wrote 4 Soroban smart contracts (Rust): auto-split that divides every transfer to family/savings/bills, credit registry that scores users from remittance history, time-locked savings vault, and agentic escrow for AI-timed execution.",
+      "Built the backend (Python + FastAPI) with rate monitoring that tracks MYR→IDR daily and triggers transfers at optimal timing via x402 protocol — zero manual effort after setup.",
+      "Implemented ZK privacy so employers can't see how much workers send home — protecting against salary manipulation common among migrant workers.",
+    ],
+    skills: [
+      "Soroban (Rust)",
+      "Python (FastAPI)",
+      "Next.js (TypeScript)",
+      "PostgreSQL",
+      "Stellar",
+      "Docker",
+      "x402 Protocol",
+      "ZK Privacy",
+    ],
+  },
+  {
+    name: "Tuskbase",
+    description:
+      "AI research agent that never forgets and never lies — every fact has cryptographic proof of its source, stored on-chain so anyone can verify.",
+    type: "Personal Project",
+    network: {
+      name: "Sui",
+      color: "bg-sky-500",
+    },
+    url: "https://github.com/yebology/tuskbase",
+    job: [
+      "Designed a research pipeline: user asks a question → Tavily searches the web → OpenAI extracts key facts → each fact gets hashed and scored (1-10 trust based on source authority).",
+      "Stored every source page as a snapshot on Walrus — even if the original site goes down, the evidence remains permanently accessible.",
+      "Wrote Move smart contracts on Sui that record provenance on-chain: content hash, source URL, trust score, and timestamp — anyone can verify any claim the AI makes.",
+    ],
+    skills: [
+      "Hono (TypeScript)",
+      "Move (Sui)",
+      "Next.js (TypeScript)",
+      "OpenAI",
+      "Walrus",
+      "MemWal",
+      "Tatum RPC",
+      "Tavily API",
+    ],
+  },
+  {
     name: "Killswitch",
     description:
-      "Real-time Exploit Detection and On-Chain Auto-Pause (Circuit Breaker) System for Solana DeFi Protocols — The Emergency Stop Button That DeFi Is Missing.",
+      "The emergency stop button DeFi is missing — detects exploits in real-time and auto-pauses protocols before funds are drained.",
     type: "Personal Project",
     network: {
       name: "Solana",
@@ -247,10 +299,9 @@ export const projectList = [
     },
     url: "https://github.com/yebology/killswitch",
     job: [
-      "Built a Sentinel monitoring service (Python + FastAPI) that evaluates every transaction against configurable invariant rules with sub-second detection latency.",
-      "Developed an on-chain Guardian Program (Anchor/Rust) with circuit breaker that auto-pauses protocols when thresholds are breached.",
-      "Implemented severity escalation logic that correlates multiple signals and auto-escalates to CRITICAL when 2+ rules are in warning state simultaneously.",
-      "Handled end-to-end development: Next.js dashboard, Python backend, Anchor smart contract, Telegram alerts, and Docker infrastructure.",
+      "Built a real-time monitoring service that evaluates every on-chain transaction against configurable rules — detects anomalies with sub-second latency before exploits drain funds.",
+      "Developed an Anchor smart contract (Rust) that acts as a circuit breaker: when the Sentinel flags danger, it auto-pauses the target protocol on-chain.",
+      "Implemented multi-signal escalation — if 2+ rules trigger simultaneously, severity auto-escalates to CRITICAL and fires instant Telegram alerts to protocol owners.",
     ],
     skills: [
       "Python (FastAPI)",
@@ -266,7 +317,7 @@ export const projectList = [
   {
     name: "Miora AI",
     description:
-      "Web3 Trading Reputation Protocol on Base That Analyzes Wallets, Publishes Scores On-Chain via EAS Attestations, and Runs AI Bots That Trade Autonomously Based on Top Wallets.",
+      "On-chain trading reputation that scores wallets and lets AI bots copy-trade the best performers autonomously.",
     type: "Personal Project",
     network: {
       name: "Base",
@@ -274,9 +325,8 @@ export const projectList = [
     },
     url: "https://github.com/yebology/miora-ai",
     job: [
-      "Built a multi-factor scoring engine with FIFO PnL matching, publishing on-chain reputation via EAS on Base Sepolia.",
-      "Developed AI trading bots (Wallet Bot & Consensus Bot) powered by Coinbase AgentKit with CDP Server Wallets.",
-      "Handled end-to-end development: Next.js frontend, Go (Fiber) backend, Python (FastAPI) agent sidecar, and PostgreSQL.",
+      "Built a scoring engine that analyzes wallet trade history using FIFO PnL matching, then publishes reputation scores on-chain via EAS attestations — transparent and tamper-proof.",
+      "Developed two AI trading bots: one that mirrors a single top wallet, and one that aggregates consensus from multiple high-scorers before executing trades autonomously via Coinbase AgentKit.",
     ],
     skills: [
       "Next.js (TypeScript)",
@@ -292,7 +342,7 @@ export const projectList = [
   {
     name: "NusaHub",
     description:
-      "Web3 Crowdfunding Platform Connecting Indonesian Game Developers with Global Investors through Milestone-Based Funding and Anti-Fraud Investor Voting.",
+      "Crowdfunding for Indonesian game devs where investors vote on milestones — funds only release when the team delivers.",
     type: "Team Project",
     network: {
       name: "Ethereum",
@@ -300,14 +350,15 @@ export const projectList = [
     },
     url: "https://github.com/NusaHub",
     job: [
-      "Built DAO-governed, UUPS, milestone-based, anti-fraud crowdfunding smart contracts using Foundry (Solidity).",
-      "Enabled secure wallet access and frontend interaction with on-chain smart contracts using Xellar & Wagmi.",
+      "Designed upgradeable (UUPS) smart contracts where funds release only after investors vote that a milestone is complete — preventing rug pulls common in indie game crowdfunding.",
+      "Integrated Xellar embedded wallet so users can interact with smart contracts without managing private keys — lowering the Web3 barrier for non-crypto-native game devs.",
     ],
     skills: ["Foundry (Solidity)", "Layer-2", "TypeScript", "Wagmi", "Xellar"],
   },
   {
     name: "BlocEstate",
-    description: "Web3 Real Estate Auction Platform in Indonesia",
+    description:
+      "Decentralized real estate auction platform — bringing transparency to Indonesia's property market through on-chain bidding.",
     type: "Team Project",
     network: {
       name: "ICP",
@@ -315,15 +366,16 @@ export const projectList = [
     },
     url: "https://github.com/yebology/blocestate-summary.git",
     job: [
-      "Won 2nd Place in Codefest ICP Hub Indonesia 7.0",
-      "Enabled secure wallet authentication and frontend interaction with on-chain smart contracts on ICP for a decentralized real estate auction platform in Indonesia using Plug Wallet & Agent.js.",
+      "🏆 Won 2nd Place at Codefest ICP Hub Indonesia 7.0.",
+      "Connected ICP canisters to the React frontend via Agent.js — enabling real-time bidding, auction creation, and ownership transfer without page reloads.",
+      "Integrated Plug Wallet for one-click authentication and Pinata IPFS for storing property images off-chain with on-chain references.",
     ],
     skills: ["JavaScript", "React", "Agent.js", "Pinata", "Plug Wallet"],
   },
   {
     name: "BlocTenderID",
     description:
-      "A DAO & AI-Powered Platform for Nepotism-Free Government Procurement",
+      "Anti-nepotism government procurement — DAO voting ensures contracts go to the best bidder, not the best connection.",
     type: "Team Project",
     network: {
       name: "Optimism",
@@ -331,16 +383,16 @@ export const projectList = [
     },
     url: "https://github.com/garuda-hacks-6-ucs",
     job: [
-      "Selected as a Top 7 Finalist at GarudaHacks 6.0 Hackathon.",
-      "Built DAO-governed ERC-721 smart contracts for an anti-nepotism platform using Foundry (Solidity).",
-      "Enabled secure wallet access and frontend interaction with on-chain smart contracts using Xellar & Wagmi.",
+      "🏆 Top 7 Finalist at GarudaHacks 6.0 (500+ participants).",
+      "Built ERC-721 smart contracts where each tender proposal is a unique NFT — DAO members vote on-chain, making the selection process auditable and bribe-resistant.",
+      "Integrated Xellar embedded wallet so government officials can participate without crypto expertise.",
     ],
     skills: ["Foundry (Solidity)", "Layer-2", "TypeScript", "Wagmi", "Xellar"],
   },
   {
     name: "NusaQuest",
     description:
-      "Web3 Impact-To-Earn Platform That Powered By AI And DAO That Rewards Indonesia River Cleanups With NUSA Tokens, Redeemable For NFT Concert Tickets.",
+      "Clean rivers, earn rewards — AI verifies cleanup actions and rewards participants with tokens redeemable for NFT concert tickets.",
     type: "Personal Project",
     network: {
       name: "Lisk",
@@ -348,9 +400,8 @@ export const projectList = [
     },
     url: "https://github.com/NusaQuest",
     job: [
-      "Handled end-to-end Web3 development: blockchain, REST API (Golang + OpenAI integration), and React frontend.",
-      "Developed DAO-governed ERC-1155 smart contracts using Foundry (Solidity).",
-      "Enabled secure wallet access and frontend interaction with on-chain contracts via Xellar & Wagmi.",
+      "Built the full stack solo: ERC-1155 smart contracts for token rewards, Golang REST API with OpenAI integration for verifying cleanup photo submissions, and React frontend.",
+      "Designed a DAO governance model where token holders vote on which cleanup events qualify — preventing fake submissions from gaming the reward system.",
     ],
     skills: [
       "Foundry (Solidity)",
@@ -364,7 +415,8 @@ export const projectList = [
 
   {
     name: "Roomie",
-    description: "Web3 AI-powered Accommodation Booking Platform",
+    description:
+      "AI-powered accommodation booking with tokenized room access — book, pay, and check-in entirely on-chain.",
     type: "Team Project",
     network: {
       name: "Manta Pacific",
@@ -372,9 +424,8 @@ export const projectList = [
     },
     url: "https://github.com/LouisFernando1204/roomie-dapp",
     job: [
-      "Ensured efficient token management using ERC-1155 with Foundry (Solidity).",
-      "Enhanced UX by seamlessly connected ABIs with the frontend via Ethers.js.",
-      "Enabled secure and frictionless wallet interaction by integrated Reown.",
+      "Designed ERC-1155 contracts where each room type is a token — booking = minting, check-in = burning, enabling trustless room access without intermediaries.",
+      "Connected smart contract ABIs to the frontend via Ethers.js with real-time availability updates and integrated Reown for seamless wallet connection across devices.",
     ],
     skills: [
       "Foundry (Solidity)",
@@ -387,7 +438,8 @@ export const projectList = [
 
   {
     name: "Book-Verse",
-    description: "Web3 Platform Bridging Book Authors and Readers",
+    description:
+      "Direct author-to-reader publishing — writers mint books as digital assets, readers truly own what they buy.",
     type: "Team Project",
     network: {
       name: "ICP",
@@ -395,8 +447,8 @@ export const projectList = [
     },
     url: "https://github.com/yebology/bookverse-dapp.git",
     job: [
-      "Improved platform efficiency by designing smart contract using Motoko.",
-      "Secure transactions and streamlined asset management with Internet Identity and Pinata IPFS.",
+      "Wrote Motoko smart contracts for book minting, ownership transfer, and royalty distribution — authors earn automatically on every resale.",
+      "Integrated Internet Identity for passwordless auth and Pinata IPFS for storing book content off-chain while keeping ownership records on-chain.",
     ],
     skills: ["Motoko", "TypeScript", "Internet Identity"],
   },

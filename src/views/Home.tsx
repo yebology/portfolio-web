@@ -10,14 +10,14 @@ export const Home: React.FC = () => {
   const code = `// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
 
-contract Introduction {
+contract Yobel {
     string public name = "Yobel Nathaniel Filipus";
-    string public title = "Smart Contract Dev";
-    string public funFact =
-      "I talk to smart contracts more than humans! 🤖";
+    string public role = "Web3 Builder";
+    string[] public networks =
+      ["EVM", "SVM", "Stellar", "Sui", "ICP"];
 
-    function sayHello() external pure returns (string memory) {
-        return "Hey there! Welcome to my smart contract! 🤖";
+    function whatIDo() external pure returns (string memory) {
+        return "Move money. Verify truth. Protect protocols.";
     }
 }`;
 
@@ -49,15 +49,14 @@ contract Introduction {
               />
             </h2>
             <p className="text-sm lg:text-base xl:text-lg leading-relaxed max-w-2xl opacity-90">
-              I'm a curious builder 🛠️ and blockchain enthusiast 🚀 with
-              hands-on experience building on{" "}
-              <span className="font-bold">EVM, SVM, and ICP networks</span>.
-              Experienced in developing{" "}
+              I build things that move money, verify truth, and protect
+              protocols 🛠️. Shipped across{" "}
               <span className="font-bold">
-                DAO-based systems, UUPS, and ERC-20-721-1155 smart contracts
+                EVM, SVM, Stellar, Sui, and ICP
               </span>
-              . Always exploring new ways to push Web3 forward with fresh ideas!
-              ✨
+              . Currently exploring where{" "}
+              <span className="font-bold">AI meets on-chain systems</span> to
+              make Web3 smarter, safer, and more accessible ✨
             </p>
             <div className="flex flex-row space-x-3 pt-2">
               {socialMedia.map((item, i) => (
