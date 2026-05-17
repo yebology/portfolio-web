@@ -1,4 +1,4 @@
-import { NetworkOrbit } from "@/components/ui/network-orbit";
+import { BentoStats } from "@/components/ui/bento-stats";
 import { socialMedia } from "@/utils/list";
 import { useTheme } from "@/context/ThemeContext";
 import React from "react";
@@ -120,14 +120,14 @@ export const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* Right — Network Orbit */}
+        {/* Right — Bento Stats */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
           className="hidden lg:flex flex-1 items-center justify-center order-1 lg:order-none"
         >
-          <NetworkOrbit />
+          <BentoStats />
         </motion.div>
       </div>
     </div>
