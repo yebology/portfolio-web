@@ -1,19 +1,24 @@
 import React from "react";
 import { useTheme } from "@/context/ThemeContext";
+import { AnimatedSection } from "@/components/ui/animated-section";
 
 export const Footer: React.FC = () => {
   const { isDarkTheme } = useTheme();
 
   return (
-    <div
-      className={`mt-12 py-8 pb-24 md:pb-8 border-t ${
-        isDarkTheme ? "border-slate-100/10" : "border-zinc-200"
+    <AnimatedSection
+      className={`mt-4 py-6 pb-28 md:pb-6 border-t ${
+        isDarkTheme ? "border-white/[0.04]" : "border-black/[0.04]"
       }`}
     >
-      <h1 className="text-center text-sm md:text-lg">
-        Thanks for stopping by! 🚀 | ©{" "}
-        <span className="font-bold">{new Date().getFullYear()} Yobz.io</span>
-      </h1>
-    </div>
+      <div className="text-center space-y-2">
+        <p className={`text-sm ${isDarkTheme ? "text-zinc-500" : "text-zinc-400"}`}>
+          Thanks for stopping by 🚀
+        </p>
+        <p className={`text-xs font-mono ${isDarkTheme ? "text-zinc-600" : "text-zinc-400"}`}>
+          © {new Date().getFullYear()} yobz.io — built with React + Tailwind
+        </p>
+      </div>
+    </AnimatedSection>
   );
 };

@@ -40,7 +40,7 @@ export const experienceList = [
     country: "Malaysia",
     period: "Apr 2026 - Present",
     jobdesc: [
-      "Developing internal backend systems and services using Python and AWS infrastructure.",
+      "Building and maintaining internal backend services powering axrail's AI products.",
     ],
     skills: ["Python", "Amazon Web Services (AWS)"],
   },
@@ -52,7 +52,8 @@ export const experienceList = [
     country: "Singapore",
     period: "Mar 2026 - Present",
     jobdesc: [
-      "Implemented an automated trading bot using the Bollinger Bands strategy, with control APIs and background execution built using FastAPI and trade persistence managed via Django ORM backed by MariaDB.",
+      "Built automated trading bots using Bollinger Bands and candlestick patterns (Hammer, Shooting Star, Morning/Evening Star) with control APIs for start/stop/configure.",
+      "Designed the trade persistence layer, enabling full trade history and performance analytics.",
     ],
     skills: ["FastAPI", "Django", "MariaDB"],
   },
@@ -64,8 +65,8 @@ export const experienceList = [
     country: "USA",
     period: "Dec 2025 - Present",
     jobdesc: [
-      "Built an end-to-end IoT management platform using Next.js, TypeScript, Golang (Fiber), GORM, and PostgreSQL, supporting real-time device monitoring, control, and user management similar to ThingsBoard.",
-      "Implemented CI/CD pipelines using GitHub Actions to build Docker images and deploy services to a VPS, reducing manual release steps.",
+      "Built a full IoT management platform (similar to ThingsBoard) — real-time device monitoring, remote control, and multi-tenant user management with role-based access.",
+      "Set up automated deployment: code pushed to GitHub triggers builds and deploys to production — cutting manual release from 30+ minutes to zero-touch.",
     ],
     skills: [
       "Next.js (TypeScript)",
@@ -86,9 +87,9 @@ export const experienceList = [
     country: "Malaysia",
     period: "Jan 2026 - Apr 2026",
     jobdesc: [
-      "Developed and deployed serverless applications using Python across 10+ AWS services, including AWS Lambda, API Gateway, DynamoDB, Bedrock, and S3, with infrastructure provisioned via AWS CDK.",  
-      "Conducted performance testing using k6 (smoke, load, stress, volume), validating system performance improvements of up to 87% latency reduction and 68% throughput increase, including significant reduction in error rates.",
-      "Automated 180+ test scenarios using AI-assisted testing (MCP Playwright in Kiro), improving test coverage and execution efficiency."
+      "Deployed serverless apps across 10+ cloud services with infrastructure-as-code.",
+      "Ran performance testing (smoke, load, stress, volume) — validated 87% latency reduction and 68% throughput increase after optimizations.",
+      "Automated 180+ test scenarios using AI-assisted testing, significantly improving test coverage and execution speed.",
     ],
     skills: ["Python", "AWS CloudFormation", "AWS Lambda", "Amazon S3", "Amazon Bedrock", "AWS CodePipeline", "API Gateway", "Amazon DynamoDB", "Amazon Web Services (AWS)", "DVA-C02"],
   },
@@ -100,8 +101,8 @@ export const experienceList = [
     country: "Indonesia",
     period: "Dec 2025 - Apr 2026",
     jobdesc: [
-      "Delivered an end-to-end PWA for one of the largest golf courses in East Java, Indonesia, focusing on weekly and daily reporting management for foremen and supervisors, using Next.js, TypeScript, Golang (Fiber), GORM, and PostgreSQL.",
-      "Implemented CI/CD pipelines using GitHub Actions to build Docker images and deploy services to a VPS, reducing manual release steps.",
+      "Delivered a PWA for one of the largest golf courses in East Java — used daily by foremen and supervisors for weekly/daily reporting, replacing paper-based workflows.",
+      "Automated the deployment pipeline — code pushed triggers builds and deploys to production automatically, zero manual steps.",
     ],
     skills: [
       "Next.js (TypeScript)",
@@ -122,8 +123,8 @@ export const experienceList = [
     country: "Indonesia",
     period: "Dec 2025 - Mar 2026",
     jobdesc: [
-      "Developed the core backend systems for a supermarket in Tulungagung, handling authentication, custom middleware, attendance, and transactions using Golang (Fiber), GORM, and PostgreSQL.",
-      "Managed end-to-end development using Docker, enabling consistent environments and easier maintenance.",
+      "Built the core backend for a supermarket POS system — authentication, attendance tracking, and transaction processing serving daily operations.",
+      "Containerized the entire stack for consistent environments and simplified deployment.",
     ],
     skills: ["Golang (Fiber)", "GORM", "PostgreSQL", "Docker"],
   },
@@ -135,8 +136,8 @@ export const experienceList = [
     country: "Indonesia",
     period: "Mar 2025 - Dec 2025",
     jobdesc: [
-      "Led project planning and coordination for final challenge aimed at helping musculoskeletal therapy patients adhere to physiotherapist-prescribed home exercise programs, utilizing GitHub Projects for task management.",
-      "Designed and developed the end-to-end backend system for the final challenge project using Golang (Fiber), GORM, and PostgreSQL.",
+      "Led a 5-person team building a physiotherapy adherence app — managed sprints, backlog, and cross-functional coordination.",
+      "Designed and built the backend from scratch: exercise scheduling, progress tracking, and therapist-patient data sync.",
     ],
     skills: [
       "Golang (Fiber)",

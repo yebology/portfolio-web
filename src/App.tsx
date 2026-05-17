@@ -2,6 +2,7 @@ import { ThemeProvider, useTheme } from "./context/ThemeContext";
 import { Navbar } from "./components/fixed/Navbar";
 import { Footer } from "./components/fixed/Footer";
 import { FloatingNavbar } from "./components/fixed/FloatingNavbar";
+import { GradientBackground } from "./components/ui/gradient-bg";
 import { Home } from "./views/Home";
 import { Experience } from "./views/Experience";
 import { Achievement } from "./views/Achievement";
@@ -14,37 +15,50 @@ function AppContent() {
   return (
     <div
       className={`${
-        isDarkTheme ? "bg-zinc-900 text-gray-300" : "bg-slate-100 text-gray-600"
-      } overflow-x-hidden flex flex-col font-poppins min-h-screen w-screen`}
+        isDarkTheme ? "bg-black text-zinc-300" : "bg-white text-zinc-600"
+      } flex flex-col font-sans min-h-screen transition-colors duration-500`}
     >
+      <GradientBackground />
       <Navbar />
 
       <main className="flex-1">
-        <section id="home" className="min-h-[60vh] md:min-h-[80vh] flex items-center py-12">
+        <section
+          id="home"
+          className="min-h-[70vh] md:min-h-[85vh] flex items-center py-16"
+        >
           <Home />
         </section>
 
-        <div className={`mx-8 md:mx-24 border-t ${isDarkTheme ? "border-slate-100/10" : "border-zinc-200"}`} />
+        {/* Divider */}
+        <div className="mx-6 md:mx-16 lg:mx-24">
+          <div className={`h-px ${isDarkTheme ? "bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" : "bg-gradient-to-r from-transparent via-black/[0.06] to-transparent"}`} />
+        </div>
 
-        <section id="experience" className="py-20">
+        <section id="experience" className="py-8 md:py-12">
           <Experience />
         </section>
 
-        <div className={`mx-8 md:mx-24 border-t ${isDarkTheme ? "border-slate-100/10" : "border-zinc-200"}`} />
+        <div className="mx-6 md:mx-16 lg:mx-24">
+          <div className={`h-px ${isDarkTheme ? "bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" : "bg-gradient-to-r from-transparent via-black/[0.06] to-transparent"}`} />
+        </div>
 
-        <section id="achievement" className="py-20">
+        <section id="achievement" className="py-8 md:py-12">
           <Achievement />
         </section>
 
-        <div className={`mx-8 md:mx-24 border-t ${isDarkTheme ? "border-slate-100/10" : "border-zinc-200"}`} />
+        <div className="mx-6 md:mx-16 lg:mx-24">
+          <div className={`h-px ${isDarkTheme ? "bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" : "bg-gradient-to-r from-transparent via-black/[0.06] to-transparent"}`} />
+        </div>
 
-        <section id="certification" className="py-20">
+        <section id="certification" className="py-8 md:py-12">
           <Certification />
         </section>
 
-        <div className={`mx-8 md:mx-24 border-t ${isDarkTheme ? "border-slate-100/10" : "border-zinc-200"}`} />
+        <div className="mx-6 md:mx-16 lg:mx-24">
+          <div className={`h-px ${isDarkTheme ? "bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" : "bg-gradient-to-r from-transparent via-black/[0.06] to-transparent"}`} />
+        </div>
 
-        <section id="project" className="py-20">
+        <section id="project" className="py-8 md:py-12">
           <Project />
         </section>
       </main>

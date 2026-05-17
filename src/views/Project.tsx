@@ -1,7 +1,10 @@
 import { projectList } from "@/utils/list";
 import { useTheme } from "@/context/ThemeContext";
+import { SectionHeading } from "@/components/ui/section-heading";
+import { StaggerContainer, StaggerItem } from "@/components/ui/animated-section";
+import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 
 const INITIAL_COUNT = 4;
 const VISIBLE_JOBS = 1;
@@ -21,153 +24,172 @@ const ProjectCard: React.FC<{
     : project.skills.slice(0, VISIBLE_SKILLS);
 
   return (
-    <div
-      className={`border p-5 md:p-6 rounded-xl transition-all duration-200 hover:-translate-y-1 ${
+    <motion.div
+      whileHover={{ y: -6, transition: { duration: 0.3, ease: "easeOut" } }}
+      className={`relative group p-5 md:p-7 rounded-2xl transition-all duration-300 overflow-hidden h-full ${
         isDarkTheme
-          ? "border-slate-100/10 hover:border-slate-100/30 bg-zinc-800/30 shadow-lg"
-          : "border-zinc-200 hover:border-zinc-400 bg-white/50 shadow-sm"
+          ? "bg-white/[0.02] border border-white/[0.06] hover:border-violet-500/30 hover:bg-white/[0.04]"
+          : "bg-white/70 border border-black/[0.06] hover:border-violet-500/30 hover:shadow-lg hover:shadow-violet-500/5"
       }`}
     >
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-3">
-        <div className="flex flex-row space-x-2 items-center flex-wrap">
-          <a
-            className="font-semibold hover:underline underline-offset-4 text-sm md:text-lg"
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {project.name}
-          </a>
-          <div
-            className={`rounded-lg py-0.5 px-2 text-xs border ${
-              project.type === "Personal Project"
-                ? "border-indigo-600"
-                : "border-pink-500"
+      {/* Hover gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-violet-600/[0.03] to-fuchsia-600/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+
+      <div className="relative z-10 flex flex-col h-full">
+        {/* Header */}
+        <div className="flex flex-col gap-2 mb-3">
+          <div className="flex items-start justify-between gap-2">
+            <div className="flex flex-row items-center gap-2 flex-wrap">
+              <a
+                className={`font-semibold text-sm md:text-base hover:text-violet-400 transition-colors ${
+                  isDarkTheme ? "text-white" : "text-zinc-900"
+                }`}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {project.name}
+                <ExternalLink size={12} className="inline ml-1.5 opacity-40" />
+              </a>
+              <span
+                className={`rounded-full py-0.5 px-2.5 text-[10px] font-medium border ${
+                  project.type === "Personal Project"
+                    ? isDarkTheme
+                      ? "border-indigo-500/30 text-indigo-300 bg-indigo-500/10"
+                      : "border-indigo-500/30 text-indigo-600 bg-indigo-50"
+                    : isDarkTheme
+                    ? "border-pink-500/30 text-pink-300 bg-pink-500/10"
+                    : "border-pink-500/30 text-pink-600 bg-pink-50"
+                }`}
+              >
+                {project.type === "Personal Project" ? "Solo" : "Team"}
+              </span>
+            </div>
+            <div className="flex flex-row items-center gap-1.5 shrink-0">
+              <div className={`rounded-full w-2 h-2 ${project.network.color}`} />
+              <span className={`text-[10px] md:text-xs font-mono ${isDarkTheme ? "text-zinc-500" : "text-zinc-400"}`}>
+                {project.network.name}
+              </span>
+            </div>
+          </div>
+
+          <p className={`text-xs md:text-[13px] leading-relaxed ${isDarkTheme ? "text-zinc-400" : "text-zinc-500"}`}>
+            {project.description}
+          </p>
+        </div>
+
+        {/* Job descriptions */}
+        {visibleJobs.length > 0 && (
+          <ul className="mt-3 space-y-2">
+            {visibleJobs.map((job, i) => (
+              <li
+                key={i}
+                className={`text-xs md:text-[13px] leading-relaxed pl-4 relative before:absolute before:left-0 before:top-[7px] before:w-1.5 before:h-1.5 before:rounded-full ${
+                  isDarkTheme
+                    ? "text-zinc-400 before:bg-violet-500/40"
+                    : "text-zinc-500 before:bg-violet-400/40"
+                }`}
+              >
+                {job}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {/* Skills */}
+        {visibleSkills.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mt-4">
+            {visibleSkills.map((skill, i) => (
+              <span
+                key={i}
+                className={`rounded-full px-2.5 py-0.5 text-[10px] md:text-xs font-medium ${
+                  isDarkTheme
+                    ? "bg-white/[0.04] text-zinc-300 border border-white/[0.06]"
+                    : "bg-zinc-100 text-zinc-600 border border-zinc-200"
+                }`}
+              >
+                {skill}
+              </span>
+            ))}
+            {!expanded && project.skills.length > VISIBLE_SKILLS && (
+              <span className={`text-[10px] self-center ${isDarkTheme ? "text-zinc-600" : "text-zinc-400"}`}>
+                +{project.skills.length - VISIBLE_SKILLS}
+              </span>
+            )}
+          </div>
+        )}
+
+        {/* Expand */}
+        {hasMore && (
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className={`mt-4 flex items-center gap-1 text-xs font-medium transition-colors ${
+              isDarkTheme
+                ? "text-violet-400 hover:text-violet-300"
+                : "text-violet-500 hover:text-violet-600"
             }`}
           >
-            {project.type}
-          </div>
-        </div>
-        <div className="flex flex-row items-center space-x-1.5">
-          <div
-            className={`rounded-full size-2 ${project.network.color}`}
-          />
-          <span className="text-xs opacity-70">{project.network.name}</span>
-        </div>
+            {expanded ? (
+              <>Less <ChevronUp size={12} /></>
+            ) : (
+              <>More <ChevronDown size={12} /></>
+            )}
+          </button>
+        )}
       </div>
-
-      <p className="text-[13px] leading-relaxed mb-3 opacity-80">
-        {project.description}
-      </p>
-
-      {visibleJobs.length > 0 && (
-        <ul className="mt-2 list-disc ml-5 space-y-1">
-          {visibleJobs.map((job, jobIndex) => (
-            <li
-              key={jobIndex}
-              className={`text-[12px] md:text-[13px] leading-relaxed ${
-                isDarkTheme ? "text-slate-400" : "text-zinc-500"
-              }`}
-            >
-              {job}
-            </li>
-          ))}
-        </ul>
-      )}
-
-      {visibleSkills.length > 0 && (
-        <div className="flex flex-wrap gap-1.5 mt-3">
-          {visibleSkills.map((skill, i) => (
-            <span
-              key={i}
-              className={`rounded-md border px-2 py-0.5 text-[11px] md:text-xs ${
-                isDarkTheme
-                  ? "border-slate-100/15 bg-slate-800/60"
-                  : "border-zinc-300 bg-zinc-100"
-              }`}
-            >
-              {skill}
-            </span>
-          ))}
-          {!expanded && project.skills.length > VISIBLE_SKILLS && (
-            <span className="text-xs opacity-40 self-center">
-              +{project.skills.length - VISIBLE_SKILLS} more
-            </span>
-          )}
-        </div>
-      )}
-
-      {hasMore && (
-        <button
-          onClick={() => setExpanded(!expanded)}
-          className={`mt-4 flex items-center gap-1 text-xs transition-colors ${
-            isDarkTheme
-              ? "text-slate-400 hover:text-slate-200"
-              : "text-zinc-500 hover:text-zinc-700"
-          }`}
-        >
-          {expanded ? (
-            <>
-              Show Less <ChevronUp size={14} />
-            </>
-          ) : (
-            <>
-              Show More <ChevronDown size={14} />
-            </>
-          )}
-        </button>
-      )}
-    </div>
+    </motion.div>
   );
 };
 
 export const Project: React.FC = () => {
   const { isDarkTheme } = useTheme();
   const [showAll, setShowAll] = useState(false);
-  const visibleProjects = showAll ? projectList : projectList.slice(0, INITIAL_COUNT);
+  const visibleProjects = showAll
+    ? projectList
+    : projectList.slice(0, INITIAL_COUNT);
 
   return (
-    <div className="mx-8 md:mx-24">
-      <div className="text-center mb-12">
-        <h2
-          className={`text-4xl xl:text-5xl font-bold bg-gradient-to-b ${
-            isDarkTheme
-              ? "from-white to-gray-400/80"
-              : "from-black to-gray-300/80"
-          } bg-clip-text text-transparent leading-normal`}
-        >
-          Projects
-        </h2>
-        <p className="mt-2 opacity-60 text-sm">Things I've built and shipped</p>
-      </div>
+    <div className="px-6 md:px-16 lg:px-24">
+      <SectionHeading title="Projects" subtitle="What I've built" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+      <StaggerContainer
+        key={showAll ? "all" : "initial"}
+        className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6"
+      >
         {visibleProjects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <StaggerItem key={index} className="h-full">
+            <ProjectCard project={project} />
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerContainer>
 
       {projectList.length > INITIAL_COUNT && (
-        <div className="flex justify-center mt-8">
-          <button
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="flex justify-center mt-10"
+        >
+          <motion.button
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
             onClick={() => setShowAll(!showAll)}
-            className={`flex items-center gap-1 rounded-full px-6 py-2 text-sm transition-all duration-200 border ${
+            className={`flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-medium transition-all duration-300 ${
               isDarkTheme
-                ? "border-slate-100/20 hover:bg-zinc-800 hover:border-slate-100/40"
-                : "border-zinc-300 hover:bg-zinc-200 hover:border-zinc-400"
+                ? "bg-violet-600/10 border border-violet-500/20 text-violet-300 hover:bg-violet-600/20 hover:border-violet-500/40"
+                : "bg-violet-50 border border-violet-200 text-violet-600 hover:bg-violet-100 hover:border-violet-300"
             }`}
           >
             {showAll ? (
-              <>
-                Show Less <ChevronUp size={14} />
-              </>
+              <>Show Less <ChevronUp size={14} /></>
             ) : (
               <>
-                Show More ({projectList.length - INITIAL_COUNT} more) <ChevronDown size={14} />
+                Show More ({projectList.length - INITIAL_COUNT} more){" "}
+                <ChevronDown size={14} />
               </>
             )}
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       )}
     </div>
   );

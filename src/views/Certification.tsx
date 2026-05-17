@@ -1,65 +1,69 @@
 import { certificationList } from "@/utils/list";
 import { useTheme } from "@/context/ThemeContext";
+import { SectionHeading } from "@/components/ui/section-heading";
+import { StaggerContainer, StaggerItem } from "@/components/ui/animated-section";
+import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import React from "react";
 
 export const Certification: React.FC = () => {
   const { isDarkTheme } = useTheme();
 
   return (
-    <div className="mx-8 md:mx-24">
-      <div className="text-center mb-12">
-        <h2
-          className={`text-4xl xl:text-5xl font-bold bg-gradient-to-b ${
-            isDarkTheme
-              ? "from-white to-gray-400/80"
-              : "from-black to-gray-300/80"
-          } bg-clip-text text-transparent leading-normal`}
-        >
-          Certifications
-        </h2>
-        <p className="mt-2 opacity-60 text-sm">
-          Professional credentials and qualifications
-        </p>
-      </div>
+    <div className="px-6 md:px-16 lg:px-24">
+      <SectionHeading
+        title="Certifications"
+        subtitle="Credentials"
+      />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
         {certificationList.map((cert, index) => (
-          <a
-            key={index}
-            href={cert.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`border p-5 md:p-6 rounded-xl transition-all duration-200 hover:-translate-y-1 flex flex-col items-center text-center ${
-              isDarkTheme
-                ? "border-slate-100/10 hover:border-slate-100/30 bg-zinc-800/30 shadow-lg"
-                : "border-zinc-200 hover:border-zinc-400 bg-white/50 shadow-sm"
-            }`}
-          >
-            <img
-              src={cert.badge}
-              alt={cert.name}
-              className="w-32 h-32 md:w-40 md:h-40 object-contain mb-4"
-              loading="lazy"
-            />
-            <h3 className="font-semibold text-sm md:text-base mb-1">
-              {cert.name}
-            </h3>
-            <p className="text-xs opacity-60 mb-2">{cert.issuer}</p>
-            <p className="text-xs opacity-50">
-              Issued {cert.issued} · Expires {cert.expires}
-            </p>
-            <span
-              className={`mt-3 text-xs px-3 py-1 rounded-full border ${
+          <StaggerItem key={index}>
+            <motion.a
+              href={cert.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -6, transition: { duration: 0.3 } }}
+              className={`relative group block p-6 md:p-8 rounded-2xl transition-all duration-300 text-center overflow-hidden h-full ${
                 isDarkTheme
-                  ? "border-slate-100/15 bg-slate-800/60"
-                  : "border-zinc-300 bg-zinc-100"
+                  ? "bg-white/[0.02] border border-white/[0.06] hover:border-violet-500/30 hover:bg-white/[0.04]"
+                  : "bg-white/70 border border-black/[0.06] hover:border-violet-500/30 hover:shadow-lg hover:shadow-violet-500/5"
               }`}
             >
-              View Credential
-            </span>
-          </a>
+              {/* Hover gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-600/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+
+              <div className="relative z-10 flex flex-col items-center">
+                <motion.img
+                  src={cert.badge}
+                  alt={cert.name}
+                  className="w-28 h-28 md:w-36 md:h-36 object-contain mb-5"
+                  loading="lazy"
+                  whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                />
+                <h3 className={`font-semibold text-sm md:text-base mb-2 ${isDarkTheme ? "text-white" : "text-zinc-900"}`}>
+                  {cert.name}
+                </h3>
+                <p className={`text-xs mb-1 ${isDarkTheme ? "text-zinc-500" : "text-zinc-400"}`}>
+                  {cert.issuer}
+                </p>
+                <p className={`text-[11px] font-mono ${isDarkTheme ? "text-zinc-600" : "text-zinc-400"}`}>
+                  {cert.issued} → {cert.expires}
+                </p>
+                <span
+                  className={`mt-4 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full transition-colors ${
+                    isDarkTheme
+                      ? "bg-violet-600/10 text-violet-300 border border-violet-500/20 group-hover:bg-violet-600/20"
+                      : "bg-violet-50 text-violet-600 border border-violet-200 group-hover:bg-violet-100"
+                  }`}
+                >
+                  View <ExternalLink size={10} />
+                </span>
+              </div>
+            </motion.a>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerContainer>
     </div>
   );
 };
