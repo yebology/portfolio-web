@@ -266,7 +266,7 @@ export const projectList = [
   {
     name: "Tuskbase",
     description:
-      "AI research agent that never forgets and never lies — every fact has cryptographic proof of its source, stored on-chain so anyone can verify.",
+      "AI research agent with verifiable reports — searches up to 20 real sources, generates a PDF, and records proof on Sui so anyone can verify.",
     type: "Personal Project",
     network: {
       name: "Sui",
@@ -274,9 +274,9 @@ export const projectList = [
     },
     url: "https://github.com/yebology/tuskbase",
     job: [
-      "Designed a research pipeline: user asks a question → Tavily searches the web → OpenAI extracts key facts → each fact gets hashed and scored (1-10 trust based on source authority).",
-      "Stored every source page as a snapshot on Walrus — even if the original site goes down, the evidence remains permanently accessible.",
-      "Wrote Move smart contracts on Sui that record provenance on-chain: content hash, source URL, trust score, and timestamp — anyone can verify any claim the AI makes.",
+      "Built a deep research pipeline: agent searches up to 20 real sources, extracts 3-5 facts per source with trust scoring, and generates a professional PDF report.",
+      "Stored PDF reports permanently on Walrus and recorded the report hash on Sui via Tatum RPC — anyone can verify the report hasn't been tampered with.",
+      "Integrated Tatum MCP for on-chain data queries (token prices, wallet portfolios) alongside the research capabilities.",
     ],
     skills: [
       "Hono (TypeScript)",
@@ -286,7 +286,10 @@ export const projectList = [
       "Walrus",
       "MemWal",
       "Tatum RPC",
+      "Tatum MCP",
       "Tavily API",
+      "PDFKit",
+      "PostgreSQL",
     ],
   },
   {
