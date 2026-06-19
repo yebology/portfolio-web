@@ -52,8 +52,7 @@ export const experienceList = [
     country: "Singapore",
     period: "Mar 2026 - Present",
     jobdesc: [
-      "Built automated trading bots using Bollinger Bands and candlestick patterns (Hammer, Shooting Star, Morning/Evening Star) with control APIs for start/stop/configure.",
-      "Designed the trade persistence layer, enabling full trade history and performance analytics.",
+      "Built 4 automated trading bots (Bollinger Bands, candlestick pattern, combined strategy, support/resistance) with control APIs and trade persistence for full history and analytics.",
     ],
     skills: ["FastAPI", "Django", "MariaDB"],
   },
@@ -65,8 +64,8 @@ export const experienceList = [
     country: "USA",
     period: "Dec 2025 - Present",
     jobdesc: [
-      "Built a full IoT management platform (similar to ThingsBoard) — real-time device monitoring, remote control, and multi-tenant user management with role-based access.",
-      "Set up automated deployment: code pushed to GitHub triggers builds and deploys to production — cutting manual release from 30+ minutes to zero-touch.",
+      "Built an AI-assisted IoT management platform — real-time monitoring, multi-tenant RBAC, and prompt-based dashboard generation.",
+      "Set up CI/CD pipeline to production that auto-deploys on every push.",
     ],
     skills: [
       "Next.js (TypeScript)",
@@ -101,8 +100,7 @@ export const experienceList = [
     country: "Indonesia",
     period: "Dec 2025 - Apr 2026",
     jobdesc: [
-      "Delivered a PWA for one of the largest golf courses in East Java — used daily by foremen and supervisors for weekly/daily reporting, replacing paper-based workflows.",
-      "Automated the deployment pipeline — code pushed triggers builds and deploys to production automatically, zero manual steps.",
+      "Delivered a PWA replacing paper-based workflows at one of East Java's largest golf courses — used daily by foremen and supervisors for reporting.",
     ],
     skills: [
       "Next.js (TypeScript)",
@@ -123,8 +121,7 @@ export const experienceList = [
     country: "Indonesia",
     period: "Dec 2025 - Mar 2026",
     jobdesc: [
-      "Built the core backend for a supermarket POS system — authentication, attendance tracking, and transaction processing serving daily operations.",
-      "Containerized the entire stack for consistent environments and simplified deployment.",
+      "Built a containerized backend for a supermarket POS — handling auth, attendance, and transactions for daily operations.",
     ],
     skills: ["Golang (Fiber)", "GORM", "PostgreSQL", "Docker"],
   },
@@ -136,8 +133,8 @@ export const experienceList = [
     country: "Indonesia",
     period: "Mar 2025 - Dec 2025",
     jobdesc: [
-      "Led a 5-person team building a physiotherapy adherence app — managed sprints, backlog, and cross-functional coordination.",
-      "Designed and built the backend from scratch: exercise scheduling, progress tracking, and therapist-patient data sync.",
+      "Led a 5-person team building a physiotherapy adherence app — managed backlog and cross-functional coordination.",
+      "Built the entire backend end-to-end: REST APIs, database design, business logic, and deployment.",
     ],
     skills: [
       "Golang (Fiber)",
@@ -238,6 +235,32 @@ export const achievementList = [
 
 export const projectList = [
   {
+    name: "Mercenary",
+    description:
+      "AI agent marketplace — hire agents, pay per-call with crypto, control spending with delegation. Fully gasless.",
+    type: "Personal Project",
+    network: {
+      name: "Base",
+      color: "bg-blue-500",
+    },
+    url: "https://github.com/yebology/mercenary",
+    job: [
+      "Built a multi-agent orchestration engine — user asks a question, system picks the right agents and pays each per-call via x402.",
+      "Implemented ERC-7710 delegation so users set spending budgets with one signature — capped per-call, per-day, revocable anytime.",
+      "All payments gasless via 1Shot API and all AI reasoning private via Venice AI (zero data retention).",
+    ],
+    skills: [
+      "Next.js (TypeScript)",
+      "MetaMask Delegation Toolkit",
+      "x402 Protocol",
+      "1Shot API",
+      "Venice AI",
+      "Base",
+      "ERC-7710",
+      "Solidity",
+    ],
+  },
+  {
     name: "KirimPay",
     description:
       "Programmable remittance that saves Indonesian migrant workers Rp14T+/year in fees — with auto-split savings, on-chain credit scoring, and AI-timed transfers.",
@@ -248,9 +271,9 @@ export const projectList = [
     },
     url: "https://github.com/yebology/kirimpay",
     job: [
-      "Wrote 4 Soroban smart contracts (Rust): auto-split that divides every transfer to family/savings/bills, credit registry that scores users from remittance history, time-locked savings vault, and agentic escrow for AI-timed execution.",
-      "Built the backend (Python + FastAPI) with rate monitoring that tracks MYR→IDR daily and triggers transfers at optimal timing via x402 protocol — zero manual effort after setup.",
-      "Implemented ZK privacy so employers can't see how much workers send home — protecting against salary manipulation common among migrant workers.",
+      "Wrote 4 smart contracts handling auto-split payments, credit scoring, time-locked savings, and AI-timed escrow execution.",
+      "Built the backend with rate monitoring that tracks MYR→IDR daily and triggers transfers at optimal timing.",
+      "Implemented ZK privacy so employers can't see how much workers send home — protecting against salary manipulation.",
     ],
     skills: [
       "Soroban (Rust)",
@@ -274,9 +297,9 @@ export const projectList = [
     },
     url: "https://github.com/yebology/tuskbase",
     job: [
-      "Built a deep research pipeline: agent searches up to 20 real sources, extracts 3-5 facts per source with trust scoring, and generates a professional PDF report.",
-      "Stored PDF reports permanently on Walrus and recorded the report hash on Sui via Tatum RPC — anyone can verify the report hasn't been tampered with.",
-      "Integrated Tatum MCP for on-chain data queries (token prices, wallet portfolios) alongside the research capabilities.",
+      "Built a research pipeline: searches up to 20 sources, extracts key facts with trust scoring, and generates a PDF report.",
+      "Stored reports on decentralized storage and recorded the hash on-chain — anyone can verify authenticity.",
+      "Integrated blockchain data queries so the agent can answer both research and on-chain questions.",
     ],
     skills: [
       "Hono (TypeScript)",
@@ -303,9 +326,9 @@ export const projectList = [
     },
     url: "https://github.com/yebology/killswitch",
     job: [
-      "Built a real-time monitoring service that evaluates every on-chain transaction against configurable rules — detects anomalies with sub-second latency before exploits drain funds.",
-      "Developed an Anchor smart contract (Rust) that acts as a circuit breaker: when the Sentinel flags danger, it auto-pauses the target protocol on-chain.",
-      "Implemented multi-signal escalation — if 2+ rules trigger simultaneously, severity auto-escalates to CRITICAL and fires instant Telegram alerts to protocol owners.",
+      "Built a real-time monitoring service that evaluates every transaction against configurable rules with sub-second detection latency.",
+      "Developed a smart contract circuit breaker that auto-pauses protocols when the Sentinel flags danger.",
+      "Implemented multi-signal escalation — 2+ rules triggering simultaneously auto-escalates to CRITICAL with instant Telegram alerts.",
     ],
     skills: [
       "Python (FastAPI)",
@@ -329,8 +352,8 @@ export const projectList = [
     },
     url: "https://github.com/yebology/miora-ai",
     job: [
-      "Built a scoring engine that analyzes wallet trade history using FIFO PnL matching, then publishes reputation scores on-chain via EAS attestations — transparent and tamper-proof.",
-      "Developed two AI trading bots: one that mirrors a single top wallet, and one that aggregates consensus from multiple high-scorers before executing trades autonomously via Coinbase AgentKit.",
+      "Built a scoring engine that analyzes wallet trade history using FIFO PnL matching and publishes reputation scores on-chain.",
+      "Developed two AI trading bots: one mirrors a top wallet, one aggregates consensus from multiple high-scorers before executing trades.",
     ],
     skills: [
       "Next.js (TypeScript)",
@@ -354,8 +377,8 @@ export const projectList = [
     },
     url: "https://github.com/NusaHub",
     job: [
-      "Designed upgradeable (UUPS) smart contracts where funds release only after investors vote that a milestone is complete — preventing rug pulls common in indie game crowdfunding.",
-      "Integrated Xellar embedded wallet so users can interact with smart contracts without managing private keys — lowering the Web3 barrier for non-crypto-native game devs.",
+      "Designed upgradeable smart contracts where funds release only after investors vote a milestone is complete — preventing rug pulls.",
+      "Integrated embedded wallet so users interact with contracts without managing private keys.",
     ],
     skills: ["Foundry (Solidity)", "Layer-2", "TypeScript", "Wagmi", "Xellar"],
   },
@@ -371,8 +394,8 @@ export const projectList = [
     url: "https://github.com/yebology/blocestate-summary.git",
     job: [
       "🏆 Won 2nd Place at Codefest ICP Hub Indonesia 7.0.",
-      "Connected ICP canisters to the React frontend via Agent.js — enabling real-time bidding, auction creation, and ownership transfer without page reloads.",
-      "Integrated Plug Wallet for one-click authentication and Pinata IPFS for storing property images off-chain with on-chain references.",
+      "Connected smart contracts to the frontend — enabling real-time bidding, auction creation, and ownership transfer without page reloads.",
+      "Integrated one-click wallet authentication and decentralized storage for property images with on-chain references.",
     ],
     skills: ["JavaScript", "React", "Agent.js", "Pinata", "Plug Wallet"],
   },
@@ -388,8 +411,8 @@ export const projectList = [
     url: "https://github.com/garuda-hacks-6-ucs",
     job: [
       "🏆 Top 7 Finalist at GarudaHacks 6.0 (500+ participants).",
-      "Built ERC-721 smart contracts where each tender proposal is a unique NFT — DAO members vote on-chain, making the selection process auditable and bribe-resistant.",
-      "Integrated Xellar embedded wallet so government officials can participate without crypto expertise.",
+      "Built ERC-721 smart contracts where each tender proposal is a unique NFT — DAO members vote on-chain, making selection auditable.",
+      "Integrated embedded wallet so government officials can participate without crypto expertise.",
     ],
     skills: ["Foundry (Solidity)", "Layer-2", "TypeScript", "Wagmi", "Xellar"],
   },
@@ -404,8 +427,8 @@ export const projectList = [
     },
     url: "https://github.com/NusaQuest",
     job: [
-      "Built the full stack solo: ERC-1155 smart contracts for token rewards, Golang REST API with OpenAI integration for verifying cleanup photo submissions, and React frontend.",
-      "Designed a DAO governance model where token holders vote on which cleanup events qualify — preventing fake submissions from gaming the reward system.",
+      "Built the full stack solo: smart contracts for token rewards, REST API with AI for verifying cleanup photos, and frontend.",
+      "Designed a DAO governance model where token holders vote on which cleanup events qualify — preventing fake submissions.",
     ],
     skills: [
       "Foundry (Solidity)",
@@ -428,8 +451,8 @@ export const projectList = [
     },
     url: "https://github.com/LouisFernando1204/roomie-dapp",
     job: [
-      "Designed ERC-1155 contracts where each room type is a token — booking = minting, check-in = burning, enabling trustless room access without intermediaries.",
-      "Connected smart contract ABIs to the frontend via Ethers.js with real-time availability updates and integrated Reown for seamless wallet connection across devices.",
+      "Designed contracts where each room type is a token — booking = minting, check-in = burning, trustless access without intermediaries.",
+      "Connected smart contracts to the frontend with real-time availability updates and seamless wallet connection across devices.",
     ],
     skills: [
       "Foundry (Solidity)",
@@ -451,8 +474,8 @@ export const projectList = [
     },
     url: "https://github.com/yebology/bookverse-dapp.git",
     job: [
-      "Wrote Motoko smart contracts for book minting, ownership transfer, and royalty distribution — authors earn automatically on every resale.",
-      "Integrated Internet Identity for passwordless auth and Pinata IPFS for storing book content off-chain while keeping ownership records on-chain.",
+      "Wrote smart contracts for book minting, ownership transfer, and royalty distribution — authors earn automatically on every resale.",
+      "Integrated passwordless auth and decentralized storage for book content with on-chain ownership records.",
     ],
     skills: ["Motoko", "TypeScript", "Internet Identity"],
   },

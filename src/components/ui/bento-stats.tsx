@@ -3,7 +3,7 @@ import { useTheme } from "@/context/ThemeContext";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "10", label: "Web3 Projects Shipped", icon: "🚀" },
+  { value: "11", label: "Web3 Projects Shipped", icon: "🚀" },
   { value: "5", label: "Blockchain Networks", icon: "⛓️" },
   { value: "4", label: "Countries Worked With", icon: "🌏" },
   { value: "1", label: "Professional Certification", icon: "🏅" },
