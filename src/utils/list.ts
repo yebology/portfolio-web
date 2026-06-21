@@ -41,7 +41,7 @@ export const experienceList = [
     period: "Apr 2026 - Present",
     jobdesc: [
       "Built AI-powered tools on AWS (document generation, conversational assistant with email/drive integration) used by internal teams to automate daily workflows.",
-      "Developed an automated mobile testing platform on AWS supporting both Android and iOS — used internally to streamline QA across axrail's product suite.",
+      "Developed an automated mobile testing tools supporting both Android and iOS — used internally to streamline QA across axrail's product suite.",
     ],
     skills: ["Python", "Amazon Web Services (AWS)", "Amazon Bedrock", "AWS Lambda", "Amazon DynamoDB", "API Gateway", "Amazon S3"],
   },
