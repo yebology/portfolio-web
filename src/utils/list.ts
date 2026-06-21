@@ -40,9 +40,10 @@ export const experienceList = [
     country: "Malaysia",
     period: "Apr 2026 - Present",
     jobdesc: [
-      "Building and maintaining internal backend services powering axrail's AI products.",
+      "Built AI-powered tools on AWS (document generation, conversational assistant with email/drive integration) used by internal teams to automate daily workflows.",
+      "Developed an automated mobile testing platform on AWS supporting both Android and iOS — used internally to streamline QA across axrail's product suite.",
     ],
-    skills: ["Python", "Amazon Web Services (AWS)"],
+    skills: ["Python", "Amazon Web Services (AWS)", "Amazon Bedrock", "AWS Lambda", "Amazon DynamoDB", "API Gateway", "Amazon S3"],
   },
   {
     role: "Fullstack Engineer",
@@ -86,7 +87,7 @@ export const experienceList = [
     country: "Malaysia",
     period: "Jan 2026 - Apr 2026",
     jobdesc: [
-      "Deployed serverless apps across 10+ cloud services with infrastructure-as-code.",
+      "Deployed serverless apps across 10+ cloud services with infrastructure-as-code using AWS infrastructure.",
       "Ran performance testing (smoke, load, stress, volume) — validated 87% latency reduction and 68% throughput increase after optimizations.",
       "Automated 180+ test scenarios using AI-assisted testing, significantly improving test coverage and execution speed.",
     ],
