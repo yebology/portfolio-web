@@ -33,6 +33,16 @@ export const socialMedia = [
 
 export const experienceList = [
   {
+    role: "Machine Learning Engineer",
+    type: "Internship",
+    color: "border-green-600",
+    company: "FlyRank.ai",
+    country: "USA",
+    period: "Jul 2026 - Present",
+    jobdesc: [],
+    skills: [],
+  },
+  {
     role: "Backend Engineer",
     type: "Contract",
     color: "border-indigo-600",
