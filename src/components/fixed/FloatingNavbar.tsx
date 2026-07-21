@@ -3,6 +3,7 @@ import {
   IconCertificate,
   IconCode,
   IconHome,
+  IconStack2,
   IconTrophy,
 } from "@tabler/icons-react";
 import React, { useEffect, useState } from "react";
@@ -13,6 +14,7 @@ import { motion } from "framer-motion";
 const icons: Record<string, React.ReactNode> = {
   home: <IconHome size={18} />,
   experience: <IconBriefcase size={18} />,
+  skills: <IconStack2 size={18} />,
   achievement: <IconTrophy size={18} />,
   certification: <IconCertificate size={18} />,
   project: <IconCode size={18} />,

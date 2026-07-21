@@ -5,6 +5,7 @@ import { FloatingNavbar } from "./components/fixed/FloatingNavbar";
 import { GradientBackground } from "./components/ui/gradient-bg";
 import { Home } from "./views/Home";
 import { Experience } from "./views/Experience";
+import { Skills } from "./views/Skills";
 import { Achievement } from "./views/Achievement";
 import { Certification } from "./views/Certification";
 import { Project } from "./views/Project";
@@ -36,6 +37,14 @@ function AppContent() {
 
         <section id="experience" className="py-8 md:py-12">
           <Experience />
+        </section>
+
+        <div className="mx-6 md:mx-16 lg:mx-24">
+          <div className={`h-px ${isDarkTheme ? "bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" : "bg-gradient-to-r from-transparent via-black/[0.06] to-transparent"}`} />
+        </div>
+
+        <section id="skills" className="py-8 md:py-12">
+          <Skills />
         </section>
 
         <div className="mx-6 md:mx-16 lg:mx-24">

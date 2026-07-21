@@ -3,6 +3,7 @@ import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconMail } from
 export const navList = [
   { title: "Home", sectionId: "home" },
   { title: "Experience", sectionId: "experience" },
+  { title: "Skills", sectionId: "skills" },
   { title: "Achievement", sectionId: "achievement" },
   { title: "Certification", sectionId: "certification" },
   { title: "Project", sectionId: "project" },
@@ -53,7 +54,7 @@ export const experienceList = [
       "Built AI-powered internal tools on AWS — document generation and a company knowledge chatbot using the WikiLLM method for internal teams.",
       "Developed AI-driven mobile testing tools for Android and iOS using Kiro CLI — automating test generation and execution across axrail's product suite.",
     ],
-    skills: ["Python", "Amazon Web Services (AWS)", "Amazon Bedrock", "AWS Lambda", "Amazon DynamoDB", "API Gateway", "Amazon S3"],
+    skills: ["Python", "Amazon Web Services (AWS)", "Amazon Bedrock", "WikiLLM Method"],
   },
   {
     role: "Fullstack Engineer",
@@ -101,7 +102,7 @@ export const experienceList = [
       "Ran performance testing (smoke, load, stress, volume) — validated 87% latency reduction and 68% throughput increase after optimizations.",
       "Automated 180+ test scenarios with AI-assisted testing — expanding coverage across axrail's core APIs.",
     ],
-    skills: ["Python", "AWS CloudFormation", "AWS Lambda", "Amazon S3", "Amazon Bedrock", "AWS CodePipeline", "API Gateway", "Amazon DynamoDB", "Amazon Web Services (AWS)", "DVA-C02"],
+    skills: ["Python", "Amazon Web Services (AWS)", "DVA-C02"],
   },
   {
     role: "Fullstack Developer",
@@ -489,6 +490,56 @@ export const projectList = [
       "Integrated passwordless auth and decentralized storage for book content with on-chain ownership records.",
     ],
     skills: ["Motoko", "TypeScript", "Internet Identity"],
+  },
+];
+
+export const skillsList = [
+  {
+    category: "Backend",
+    items: [
+      { name: "Golang (Fiber)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" },
+      { name: "Python (FastAPI, Django)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+    ],
+  },
+  {
+    category: "AI/ML",
+    items: [
+      { name: "Amazon Bedrock", logo: "/bedrock.png", logoLight: "/bedrock-light.png" },
+      { name: "WikiLLM Method", logo: "/wikillm.svg" },
+    ],
+  },
+  {
+    category: "Cloud & DevOps",
+    items: [
+      { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+      { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+      { name: "CodeCommit", logo: "/codecommit.png" },
+      { name: "GitHub Actions", logo: "/github-dark.svg", logoLight: "/github-light.svg" },
+    ],
+  },
+  {
+    category: "Database",
+    items: [
+      { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+      { name: "DynamoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dynamodb/dynamodb-original.svg" },
+      { name: "MariaDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" },
+    ],
+  },
+  {
+    category: "Testing",
+    items: [
+      { name: "Kiro CLI", logo: "/kiro.ico" },
+      { name: "Appium", logo: "/appium.svg" },
+      { name: "AI-Assisted Testing", logo: "/ai-testing.svg" },
+    ],
+  },
+  {
+    category: "Frontend",
+    items: [
+      { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+    ],
   },
 ];
 

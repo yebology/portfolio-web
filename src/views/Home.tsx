@@ -1,9 +1,11 @@
 import { BentoStats } from "@/components/ui/bento-stats";
 import { socialMedia } from "@/utils/list";
 import { useTheme } from "@/context/ThemeContext";
+import { downloadResume } from "@/utils/generate-resume";
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
+import { Download } from "lucide-react";
 
 export const Home: React.FC = () => {
   const { isDarkTheme } = useTheme();
@@ -96,7 +98,7 @@ export const Home: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.65 }}
-              className="flex flex-row gap-3 pt-2"
+              className="flex flex-row items-center gap-3 pt-2"
             >
               {socialMedia.map((item, i) => (
                 <motion.a
@@ -116,6 +118,22 @@ export const Home: React.FC = () => {
                   <item.icon className="w-4 h-4" />
                 </motion.a>
               ))}
+
+              {/* Download Resume */}
+              <motion.button
+                whileHover={{ scale: 1.05, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={downloadResume}
+                className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-medium transition-colors duration-200 ${
+                  isDarkTheme
+                    ? "bg-violet-600/10 hover:bg-violet-600/20 border border-violet-500/20 hover:border-violet-500/40 text-violet-300"
+                    : "bg-violet-50 hover:bg-violet-100 border border-violet-200 hover:border-violet-300 text-violet-600"
+                }`}
+                aria-label="Download Resume"
+              >
+                <Download size={14} />
+                Resume
+              </motion.button>
             </motion.div>
           </div>
         </div>
