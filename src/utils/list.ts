@@ -44,14 +44,14 @@ export const experienceList = [
   },
   {
     role: "Backend Engineer",
-    type: "Contract",
+    type: "Full-Time",
     color: "border-indigo-600",
     company: "axrail.ai",
     country: "Malaysia",
     period: "Apr 2026 - Present",
     jobdesc: [
-      "Built AI-powered tools on AWS (document generation, conversational assistant with email/drive integration) used by internal teams to automate daily workflows.",
-      "Developed an automated mobile testing tools supporting both Android and iOS — used internally to streamline QA across axrail's product suite.",
+      "Built AI-powered internal tools on AWS — document generation and a company knowledge chatbot using the WikiLLM method for internal teams.",
+      "Developed AI-driven mobile testing tools for Android and iOS using Kiro CLI — automating test generation and execution across axrail's product suite.",
     ],
     skills: ["Python", "Amazon Web Services (AWS)", "Amazon Bedrock", "AWS Lambda", "Amazon DynamoDB", "API Gateway", "Amazon S3"],
   },
@@ -63,7 +63,7 @@ export const experienceList = [
     country: "Singapore",
     period: "Mar 2026 - Present",
     jobdesc: [
-      "Built 4 automated trading bots (Bollinger Bands, candlestick pattern, combined strategy, support/resistance) with control APIs and trade persistence for full history and analytics.",
+      "Built 4 automated trading bots with distinct strategies (Bollinger Bands, candlestick, support/resistance, combined) — each with control APIs and full trade history persistence.",
     ],
     skills: ["FastAPI", "Django", "MariaDB"],
   },
@@ -76,7 +76,7 @@ export const experienceList = [
     period: "Dec 2025 - Present",
     jobdesc: [
       "Built an AI-assisted IoT management platform — real-time monitoring, multi-tenant RBAC, and prompt-based dashboard generation.",
-      "Set up CI/CD pipeline to production that auto-deploys on every push.",
+      "Shipped CI/CD pipeline enabling zero-downtime auto-deploys on every push to production.",
     ],
     skills: [
       "Next.js (TypeScript)",
@@ -97,9 +97,9 @@ export const experienceList = [
     country: "Malaysia",
     period: "Jan 2026 - Apr 2026",
     jobdesc: [
-      "Deployed serverless apps across 10+ cloud services with infrastructure-as-code using AWS infrastructure.",
+      "Deployed serverless applications across 10+ AWS services using CloudFormation for infrastructure-as-code.",
       "Ran performance testing (smoke, load, stress, volume) — validated 87% latency reduction and 68% throughput increase after optimizations.",
-      "Automated 180+ test scenarios using AI-assisted testing, significantly improving test coverage and execution speed.",
+      "Automated 180+ test scenarios with AI-assisted testing — expanding coverage across axrail's core APIs.",
     ],
     skills: ["Python", "AWS CloudFormation", "AWS Lambda", "Amazon S3", "Amazon Bedrock", "AWS CodePipeline", "API Gateway", "Amazon DynamoDB", "Amazon Web Services (AWS)", "DVA-C02"],
   },
@@ -111,7 +111,7 @@ export const experienceList = [
     country: "Indonesia",
     period: "Dec 2025 - Apr 2026",
     jobdesc: [
-      "Delivered a PWA replacing paper-based workflows at one of East Java's largest golf courses — used daily by foremen and supervisors for reporting.",
+      "Delivered a PWA replacing paper-based workflows at one of East Java's largest golf courses — used daily by foremen and supervisors for field reporting.",
     ],
     skills: [
       "Next.js (TypeScript)",
@@ -132,7 +132,7 @@ export const experienceList = [
     country: "Indonesia",
     period: "Dec 2025 - Mar 2026",
     jobdesc: [
-      "Built a containerized backend for a supermarket POS — handling auth, attendance, and transactions for daily operations.",
+      "Built a containerized backend for a supermarket POS — auth, attendance tracking, and transaction processing serving daily store operations.",
     ],
     skills: ["Golang (Fiber)", "GORM", "PostgreSQL", "Docker"],
   },
@@ -144,8 +144,8 @@ export const experienceList = [
     country: "Indonesia",
     period: "Mar 2025 - Dec 2025",
     jobdesc: [
-      "Led a 5-person team building a physiotherapy adherence app — managed backlog and cross-functional coordination.",
-      "Built the entire backend end-to-end: REST APIs, database design, business logic, and deployment.",
+      "Led a 5-person team building a physiotherapy adherence app — managed sprint backlog and cross-functional coordination.",
+      "Owned the backend end-to-end: REST APIs, schema design, business logic, and deployment.",
     ],
     skills: [
       "Golang (Fiber)",
