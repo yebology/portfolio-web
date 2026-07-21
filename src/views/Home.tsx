@@ -58,7 +58,7 @@ export const Home: React.FC = () => {
               </span>
               <span className="text-violet-400">
                 <Typewriter
-                  words={["Web3 Builder", "Fullstack Dev", "Smart Contract Dev"]}
+                  words={["Backend Engineer", "AI/ML Engineer"]}
                   cursor
                   cursorBlinking
                   cursorStyle="_"
@@ -79,16 +79,16 @@ export const Home: React.FC = () => {
                 isDarkTheme ? "text-zinc-400" : "text-zinc-500"
               }`}
             >
-              I build things that move money, verify truth, and protect
-              protocols. Shipped across{" "}
+              I build AI-powered backend systems for companies across{" "}
               <span className={`font-semibold ${isDarkTheme ? "text-zinc-200" : "text-zinc-700"}`}>
-                EVM, SVM, Stellar, Sui, and ICP
+                4 countries
               </span>
-              . Currently exploring where{" "}
+              . From intelligent chatbots to automated testing pipelines
+              — if it runs in production and thinks, I probably built it.{" "}
               <span className={`font-semibold ${isDarkTheme ? "text-zinc-200" : "text-zinc-700"}`}>
-                AI meets on-chain systems
-              </span>{" "}
-              to make Web3 smarter, safer, and more accessible.
+                AWS certified
+              </span>
+              .
             </motion.p>
 
             {/* Social links */}
