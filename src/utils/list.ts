@@ -4,9 +4,9 @@ export const navList = [
   { title: "Home", sectionId: "home" },
   { title: "Experience", sectionId: "experience" },
   { title: "Skills", sectionId: "skills" },
-  { title: "Achievement", sectionId: "achievement" },
-  { title: "Certification", sectionId: "certification" },
-  { title: "Project", sectionId: "project" },
+  { title: "Achievements", sectionId: "achievement" },
+  { title: "Certifications", sectionId: "certification" },
+  { title: "Projects", sectionId: "project" },
 ];
 
 export const socialMedia = [
@@ -247,58 +247,6 @@ export const achievementList = [
 
 export const projectList = [
   {
-    name: "Mercenary",
-    description:
-      "AI agent marketplace — hire agents, pay per-call with crypto, control spending with delegation. Fully gasless.",
-    type: "Personal Project",
-    network: {
-      name: "Base",
-      color: "bg-blue-500",
-    },
-    url: "https://github.com/yebology/mercenary",
-    job: [
-      "Built a multi-agent orchestration engine — user asks a question, system picks the right agents and pays each per-call via x402.",
-      "Implemented ERC-7710 delegation so users set spending budgets with one signature — capped per-call, per-day, revocable anytime.",
-      "All payments gasless via 1Shot API and all AI reasoning private via Venice AI (zero data retention).",
-    ],
-    skills: [
-      "Next.js (TypeScript)",
-      "MetaMask Delegation Toolkit",
-      "x402 Protocol",
-      "1Shot API",
-      "Venice AI",
-      "Base",
-      "ERC-7710",
-      "Solidity",
-    ],
-  },
-  {
-    name: "KirimPay",
-    description:
-      "Programmable remittance that saves Indonesian migrant workers Rp14T+/year in fees — with auto-split savings, on-chain credit scoring, and AI-timed transfers.",
-    type: "Personal Project",
-    network: {
-      name: "Stellar",
-      color: "bg-indigo-500",
-    },
-    url: "https://github.com/yebology/kirimpay",
-    job: [
-      "Wrote 4 smart contracts handling auto-split payments, credit scoring, time-locked savings, and AI-timed escrow execution.",
-      "Built the backend with rate monitoring that tracks MYR→IDR daily and triggers transfers at optimal timing.",
-      "Implemented ZK privacy so employers can't see how much workers send home — protecting against salary manipulation.",
-    ],
-    skills: [
-      "Soroban (Rust)",
-      "Python (FastAPI)",
-      "Next.js (TypeScript)",
-      "PostgreSQL",
-      "Stellar",
-      "Docker",
-      "x402 Protocol",
-      "ZK Privacy",
-    ],
-  },
-  {
     name: "Tuskbase",
     description:
       "AI research agent with verifiable reports — searches up to 20 real sources, generates a PDF, and records proof on Sui so anyone can verify.",
@@ -513,7 +461,7 @@ export const skillsList = [
     items: [
       { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
       { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-      { name: "CodeCommit", logo: "/codecommit.png" },
+      { name: "CodePipeline", logo: "/codepipeline.png" },
       { name: "GitHub Actions", logo: "/github-dark.svg", logoLight: "/github-light.svg" },
     ],
   },
